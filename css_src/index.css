@@ -436,6 +436,7 @@ picture {
   align-items: baseline;
   row-gap: 1.5rem;
 }
+
 .banner-link {
   position: absolute;
   display: grid;
@@ -468,6 +469,17 @@ picture {
 }
 .banner-link::after {
   bottom: -3rem;
+}
+.Motive h1{
+  text-align: center;
+}
+
+.Motive p{
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 3rem 16rem;
+  padding: 1rem;
+  border-radius: 1em;
+  background-color: var(--color-dark-400);
 }
 
 /*# sourceMappingURL=index.css.map */

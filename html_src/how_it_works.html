@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How it works</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Without Crying</title>
+
     <!-- Boxicons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
     <!-- Main CSS -->
-    <link rel="stylesheet" href="../css_src/how_it_works.css">
+    <link rel="stylesheet" href="../css_src/index.css" />
 </head>
 
 <body>
+
     <!-- Header -->
     <header class="header" id="header">
         <nav class="navbar container">
@@ -22,7 +25,6 @@
                     </text>
                 </svg>
             </a>
-
             <!-- Burger -->
             <div class="burger" id="burger">
                 <span class="burger-line"></span>
@@ -34,18 +36,85 @@
             <div class="menu" id="menu">
                 <ul class="menu-inner">
                     <li class="menu-item"><a href="../index.html" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="../html_src/lessons.html" class="menu-link">Lessons</a></li>
+                    <li class="menu-item"><a href="lessons.html" class="menu-link">Lessons</a></li>
                     <li class="menu-item">
-                        <a href="../html_src/how_it_works.html" class="menu-link">How It Works</a>
+                        <a href="how_it_works.html" class="menu-link">How It Works</a>
                     </li>
                     <li class="menu-item">
-                        <a href="../html_src/about.html" class="menu-link">About</a>
+                        <a href="about.html" class="menu-link">About</a>
                     </li>
 
                 </ul>
             </div>
 
-            <script src="../script_src/index.js"></script>
+            <!-- Overlay -->
+            <span class="overlay"></span>
+
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <section class="section banner-section">
+            <div class="container banner-column">
+
+                <!-- Image -->
+                <img src="img_src/hero.jpeg" class="banner-image" width="480" height="360" alt="Learning illustration"
+                    fetchpriority="high" />
+
+                <!-- Content -->
+                <div class="banner-inner">
+                    <h1 class="title-large">
+                        How it works?<br>
+                        No,Seriously -- It actually Does!
+                    </h1>
+
+                    <p class="text-base font-normal">
+                        Coding has a reputation for being painful.
+                        I decided not to make it worse.
+                        <br>
+                        Code Without Crying breaks programming into tiny, non-threatening lessons designed to teach you
+                        without emotionally humbling you. You learn one concept at a time, feel briefly superior, then
+                        move on.
+                    </p>
+
+                    <button type="button" class="menu-block btn btn-neutral"
+                        onclick="window.location.href='lessons.html'">
+                        Start Your First Lesson
+                    </button>
+
+                </div>
+
+                <!-- Social -->
+                <div class="banner-link">
+                    <a href="https://github.com/ofx-proton/Code-Without-Crying.git" title="GitHub"><i
+                            class="bx bxl-github"></i></a>
+                    <a href="#" title="Mail"><i class="bx bxl-gmail"></i></a>
+                    <a href="#" title="Community"><i class="bx bx-chat"></i></a>
+                </div>
+            </div>
+        </section>
+        <div class="Motive">
+            <h1 class="title-large">My Motive</h1>
+            <p class="font-normal">
+                Learning to code should feel empowering — not like a personal attack.
+                The goal here is simple: remove the frustration, skip the overwhelm, and keep your sanity intact.
+                Concepts are broken into small, manageable lessons so confidence builds faster than confusion.
+                With Code Without Crying, coding becomes understandable, rewarding, and surprisingly tolerable.
+
+            </p>
+        </div>
+        <div class="approach">
+            <ul>
+                <h1 class="title-medium">How will I approach it?</h1>
+                <p class="approach">For now I have some ideas spinning on my head but I don't have the words to describe
+                    so keep tuned, I am just exhausted and lazy now, Wait for next update.</p>
+            </ul>
+        </div>
+
+    </main>
+    <!-- JS -->
+    <script src="../script_src/index.js"></script>
 </body>
 
 </html>
