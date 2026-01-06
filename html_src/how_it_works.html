@@ -11,6 +11,8 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="../css_src/index.css" />
+    <link rel="stylesheet" href="../css_src/how_it_works.css" />
+
 </head>
 
 <body>
@@ -53,66 +55,98 @@
         </nav>
     </header>
 
-    <!-- Main -->
-    <main class="main">
+    <main class="main how-it-works">
+
+        <!-- Hero -->
         <section class="section banner-section">
             <div class="container banner-column">
 
-                <!-- Image -->
                 <img src="img_src/hero.jpeg" class="banner-image" width="480" height="360" alt="Learning illustration"
                     fetchpriority="high" />
 
-                <!-- Content -->
                 <div class="banner-inner">
                     <h1 class="title-large">
-                        How it works?<br>
-                        No,Seriously -- It actually Does!
+                        How it works?<br />
+                        No, seriously — it actually does.
                     </h1>
 
                     <p class="text-base font-normal">
                         Coding has a reputation for being painful.
                         I decided not to make it worse.
-                        <br>
-                        Code Without Crying breaks programming into tiny, non-threatening lessons designed to teach you
-                        without emotionally humbling you. You learn one concept at a time, feel briefly superior, then
-                        move on.
+                        <br />
+                        Code Without Crying breaks programming into tiny, non-threatening lessons.
+                        You learn one thing at a time, feel briefly intelligent, then move on.
                     </p>
 
-                    <button type="button" class="menu-block btn btn-neutral"
-                        onclick="window.location.href='lessons.html'">
+                    <button type="button" class="btn btn-neutral" onclick="window.location.href='lessons.html'">
                         Start Your First Lesson
                     </button>
-
                 </div>
 
-                <!-- Social -->
                 <div class="banner-link">
-                    <a href="https://github.com/ofx-proton/Code-Without-Crying.git" title="GitHub"><i
-                            class="bx bxl-github"></i></a>
+                    <a href="https://github.com/ofx-proton/Code-Without-Crying.git" title="GitHub">
+                        <i class="bx bxl-github"></i>
+                    </a>
                     <a href="#" title="Mail"><i class="bx bxl-gmail"></i></a>
                     <a href="#" title="Community"><i class="bx bx-chat"></i></a>
                 </div>
+
             </div>
         </section>
-        <div class="Motive">
-            <h1 class="title-large">My Motive</h1>
-            <p class="font-normal">
-                Learning to code should feel empowering — not like a personal attack.
-                The goal here is simple: remove the frustration, skip the overwhelm, and keep your sanity intact.
-                Concepts are broken into small, manageable lessons so confidence builds faster than confusion.
-                With Code Without Crying, coding becomes understandable, rewarding, and surprisingly tolerable.
 
-            </p>
-        </div>
-        <div class="approach">
-            <ul>
-                <h1 class="title-medium">How will I approach it?</h1>
-                <p class="approach">For now I have some ideas spinning on my head but I don't have the words to describe
-                    so keep tuned, I am just exhausted and lazy now, Wait for next update.</p>
-            </ul>
-        </div>
+        <!-- Motive -->
+        <section class="section motive-section">
+            <div class="container">
+                <h2 class="title-medium center">My Motive</h2>
+
+                <div class="motive-cards">
+                    <article class="motive-card">
+                        <h3>😤 The Problem</h3>
+                        <p>Coding often feels like a personal attack disguised as education.</p>
+                    </article>
+
+                    <article class="motive-card">
+                        <h3>🧠 The Fix</h3>
+                        <p>Smaller lessons. Slower pace. No intellectual jump-scares.</p>
+                    </article>
+
+                    <article class="motive-card">
+                        <h3>📈 The Goal</h3>
+                        <p>Confidence should grow faster than confusion.</p>
+                    </article>
+
+                    <article class="motive-card">
+                        <h3>😌 The Outcome</h3>
+                        <p>Understanding code without crying (most days).</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Approach -->
+        <section class="section approach-section">
+            <div class="container approach-inner">
+                <h2 class="title-medium">How will I approach it?</h2>
+
+                <p class="approach-intro">
+                    I have ideas. A lot of them.
+                    They are currently arguing in my head.
+                    Proper documentation will arrive soon — right now this is a controlled
+                    procrastination checkpoint.
+                </p>
+
+                <ul class="approach-list">
+                    <li>Interactive lessons so your brain doesn’t shut down immediately.</li>
+                    <li>You do the work — no magical tutorials doing everything for you.</li>
+                    <li>I’m learning too, so expect honesty instead of fake perfection.</li>
+                    <li>You’ll learn how to build pages like this while building them.</li>
+                </ul>
+            </div>
+        </section>
 
     </main>
+
     <!-- JS -->
     <script src="../script_src/index.js"></script>
 </body>
