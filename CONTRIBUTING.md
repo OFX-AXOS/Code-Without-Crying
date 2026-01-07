@@ -29,7 +29,8 @@ If extra styling is needed:
 1. Copy `template_main.css`
 2. Rename it (e.g. `lesson_xyz.css`)
 3. Make changes there only
-4. Link after `main.css`
+4. link 'lesson_xyz.css', not 'main.css'.
+'lesson_xyz.css' must be a full copy of 'template_main.css', so it preserves the original structure and styling while allowing new or refactored designs to be added safely.
 
 ---
 
