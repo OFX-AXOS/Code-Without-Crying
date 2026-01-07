@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System Reference - Code Without Crying</title>
+    
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    
+    <!-- Main CSS (must match original path) -->
+    <link rel="stylesheet" href="../css_src/index.css" />
+    
+    <!-- Lesson CSS -->
+    <link rel="stylesheet" href="template_main.css" />
+    
+    <!-- Reference Page Styles -->
+    <style>
+        :root {
+            --ref-color-primary: #2563eb;
+            --ref-color-secondary: #475569;
+            --ref-color-success: #10b981;
+            --ref-color-warning: #f59e0b;
+            --ref-color-danger: #ef4444;
+            --ref-border-radius: 0.5rem;
+        }
+        
+        /* Reset any interfering styles */
+        .ref-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Ensure reference styles don't interfere with component styles */
+        .ref-section,
+        .ref-component-card,
+        .ref-code-block {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .ref-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            margin-bottom: 2rem;
+            border-bottom: 4px solid var(--ref-color-primary);
+        }
+        
+        .ref-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .ref-subtitle {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        
+        /* Reference section styling only - don't affect components */
+        .ref-section-wrapper {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: var(--ref-border-radius);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .ref-section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--ref-color-primary);
+        }
+        
+        .ref-component-card {
+            margin-bottom: 2rem;
+        }
+        
+        .ref-component-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+        }
+        
+        .ref-component-description {
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .ref-requirements {
+            background: #fffbeb;
+            border-left: 4px solid var(--ref-color-warning);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 0.375rem 0.375rem 0;
+        }
+        
+        .ref-requirements-title {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ref-warning {
+            background: #fef2f2;
+            border-left: 4px solid var(--ref-color-danger);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 0.375rem 0.375rem 0;
+        }
+        
+        .ref-warning-title {
+            font-weight: 600;
+            color: #991b1b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ref-code-block {
+            position: relative;
+            background: #1e293b;
+            border-radius: var(--ref-border-radius);
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 1px solid #334155;
+        }
+        
+        .ref-code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: #0f172a;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .ref-code-label {
+            color: #cbd5e1;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .ref-copy-btn {
+            background: var(--ref-color-primary);
+            color: white;
+            border: none;
+            padding: 0.375rem 0.75rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .ref-copy-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+        
+        .ref-copy-btn.copied {
+            background: var(--ref-color-success);
+        }
+        
+        .ref-code-content {
+            padding: 1.25rem;
+            overflow-x: auto;
+            color: #e2e8f0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+        
+        .ref-code-content code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+        
+        .ref-preview {
+            background: #f1f5f9;
+            border-radius: var(--ref-border-radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .ref-preview-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .ref-toc {
+            background: #f8fafc;
+            border-radius: var(--ref-border-radius);
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .ref-toc-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #1e293b;
+        }
+        
+        .ref-toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .ref-toc-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        .ref-toc-link {
+            color: var(--ref-color-primary);
+            text-decoration: none;
+            padding: 0.375rem 0.5rem;
+            display: block;
+            border-radius: 0.25rem;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+        
+        .ref-toc-link:hover {
+            background: #e0f2fe;
+            color: #1d4ed8;
+        }
+        
+        .ref-footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            background: #f8fafc;
+        }
+        
+        .ref-highlight {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.125rem 0.375rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        
+        body {
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        
+        .ref-requirements ul,
+        .ref-warning p {
+            color: #475569;
+            margin: 0.5rem 0 0 1rem;
+        }
+        
+        .ref-requirements li {
+            margin-bottom: 0.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .ref-container {
+                padding: 0 1rem;
+            }
+            
+            .ref-title {
+                font-size: 2rem;
+            }
+            
+            .ref-section-wrapper {
+                padding: 1.25rem;
+            }
+            
+            .ref-header {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Required Base Template Section -->
+    <main class="main">
+        <section class="section" style="padding-block: 2rem 4rem;">
+            <div class="container ref-container">
+                <div class="ref-header">
+                    <h1 class="ref-title">Design System Reference</h1>
+                    <p class="ref-subtitle">Complete component library for Code Without Crying. All components require the correct parent structure for proper spacing and layout.</p>
+                </div>
+                
+                <div class="ref-toc">
+                    <h3 class="ref-toc-title">📑 Table of Contents</h3>
+                    <ul class="ref-toc-list">
+                        <li class="ref-toc-item"><a href="#required-base" class="ref-toc-link">Required Base Template</a></li>
+                        <li class="ref-toc-item"><a href="#layout-sections" class="ref-toc-link">Layout Sections</a></li>
+                        <li class="ref-toc-item"><a href="#lesson-components" class="ref-toc-link">Lesson Components</a></li>
+                        <li class="ref-toc-item"><a href="#content-components" class="ref-toc-link">Content Components</a></li>
+                        <li class="ref-toc-item"><a href="#card-grid" class="ref-toc-link">Card & Grid Components</a></li>
+                        <li class="ref-toc-item"><a href="#interactive" class="ref-toc-link">Interactive Components</a></li>
+                        <li class="ref-toc-item"><a href="#summary" class="ref-toc-link">Summary Components</a></li>
+                        <li class="ref-toc-item"><a href="#media" class="ref-toc-link">Media Components</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Required Base Template Section -->
+        <section class="section" id="required-base" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">📦 Required Base Template</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Base HTML Structure</h3>
+                        <p class="ref-component-description">
+                            This is the mandatory HTML structure that must exist in every page for the design system to work correctly.
+                            Includes all required CSS, JavaScript, fonts, and meta tags.
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Required Files & Dependencies
+                            </div>
+                            <ul>
+                                <li><strong>CSS:</strong> <span class="ref-highlight">../css_src/index.css</span> (Main styles)</li>
+                                <li><strong>CSS:</strong> <span class="ref-highlight">lessons.css</span> (Lesson-specific styles)</li>
+                                <li><strong>Icons:</strong> <span class="ref-highlight">Boxicons</span> (via CDN)</li>
+                                <li><strong>JavaScript:</strong> <span class="ref-highlight">../script_src/index.js</span> (Main scripts)</li>
+                                <li><strong>Viewport:</strong> Responsive meta tag required</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Base Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Your Page Title&lt;/title&gt;
+
+    &lt;!-- Boxicons --&gt;
+    &lt;link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" /&gt;
+
+    &lt;!-- Main CSS --&gt;
+    &lt;link rel="stylesheet" href="../css_src/index.css" /&gt;
+
+    &lt;!-- Lesson CSS (if needed) --&gt;
+    &lt;link rel="stylesheet" href="main.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Header --&gt;
+    &lt;header class="header" id="header"&gt;
+        &lt;nav class="navbar container"&gt;
+            &lt;a href="../index.html" class="brand"&gt;
+                &lt;svg width="64" height="32" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg"&gt;
+                    &lt;text x="0" y="24" font-family="monospace" font-size="24" font-weight="700" fill="currentColor"&gt;
+                        !&lt;
+                    &lt;/text&gt;
+                &lt;/svg&gt;
+            &lt;/a&gt;
+
+            &lt;div class="burger" id="burger"&gt;
+                &lt;span class="burger-line"&gt;&lt;/span&gt;
+                &lt;span class="burger-line"&gt;&lt;/span&gt;
+                &lt;span class="burger-line"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class="menu" id="menu"&gt;
+                &lt;ul class="menu-inner"&gt;
+                    &lt;li class="menu-item"&gt;&lt;a href="../index.html" class="menu-link"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="menu-item"&gt;&lt;a href="../html_src/lessons.html" class="menu-link"&gt;Lessons&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="menu-item"&gt;&lt;a href="../html_src/how_it_works.html" class="menu-link"&gt;How It Works&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+
+            &lt;span class="overlay"&gt;&lt;/span&gt;
+
+            &lt;button type="button" class="menu-block"&gt;
+                &lt;a href="../html_src/lessons.html" class="btn btn-neutral"&gt;All Lessons&lt;/a&gt;
+            &lt;/button&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;!-- Main Content Area --&gt;
+    &lt;main class="main"&gt;
+        &lt;!-- Your content goes here --&gt;
+    &lt;/main&gt;
+
+    &lt;!-- JS --&gt;
+    &lt;script src="../script_src/index.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                        
+                        <div class="ref-warning">
+                            <div class="ref-warning-title">
+                                <i class='bx bx-error'></i>
+                                Critical Requirements
+                            </div>
+                            <p><strong>⚠️ Must include all CSS files:</strong> Missing <span class="ref-highlight">index.css</span> or <span class="ref-highlight">lessons.css</span> will break styling.</p>
+                            <p><strong>⚠️ Header structure is mandatory:</strong> The navigation bar depends on the exact HTML structure shown.</p>
+                            <p><strong>⚠️ JavaScript required:</strong> The <span class="ref-highlight">index.js</span> file handles mobile menu functionality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layout Sections -->
+        <section class="section" id="layout-sections" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">📐 Layout Sections</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Main Content Section</h3>
+                        <p class="ref-component-description">
+                            The primary content wrapper that provides proper spacing and layout for page content.
+                            This is where all lesson content and components should be placed.
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Must Be Used Inside
+                            </div>
+                            <p>Must be placed within <span class="ref-highlight">&lt;main class="main"&gt;</span> after the header.</p>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Section Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;section class="section" style="padding-block: 4rem;"&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- Your content here --&gt;
+        &lt;h1 class="title-large"&gt;Your Title&lt;/h1&gt;
+        &lt;p class="text-medium font-normal"&gt;Your content...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                        
+                        <div class="ref-warning">
+                            <div class="ref-warning-title">
+                                <i class='bx bx-error'></i>
+                                Warning
+                            </div>
+                            <p><strong>⚠️ Container class is required:</strong> All content must be wrapped in <span class="ref-highlight">.container</span> for proper padding and max-width.</p>
+                            <p><strong>⚠️ Padding styles:</strong> Use <span class="ref-highlight">style="padding-block: Xrem"</span> to control vertical spacing between sections.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Breadcrumb Navigation</h3>
+                        <p class="ref-component-description">
+                            Shows the current page location within the site hierarchy. Used for navigation context.
+                        </p>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Breadcrumb Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;section class="section" style="padding-block: 5rem 0;"&gt;
+    &lt;div class="container"&gt;
+        &lt;nav class="lesson-breadcrumb"&gt;
+            &lt;a href="../index.html" class="breadcrumb-link"&gt;Home&lt;/a&gt;
+            &lt;span class="breadcrumb-separator"&gt;/&lt;/span&gt;
+            &lt;a href="../lesson_src/main.css" class="breadcrumb-link"&gt;Lessons&lt;/a&gt;
+            &lt;span class="breadcrumb-separator"&gt;/&lt;/span&gt;
+            &lt;span class="breadcrumb-current"&gt;Current Page&lt;/span&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson Components -->
+        <section class="section" id="lesson-components" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">📚 Lesson Components</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Lesson Content Wrapper</h3>
+                        <p class="ref-component-description">
+                            The mandatory wrapper for all lesson content. This container provides the correct max-width and spacing for lesson components.
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Critical Parent Structure
+                            </div>
+                            <p>All lesson components <strong>MUST</strong> be placed inside <span class="ref-highlight">.lesson-content-wrapper</span> within a <span class="ref-highlight">.container</span> and <span class="ref-highlight">.section</span>.</p>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Lesson Content Wrapper</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;section class="section" style="padding-block: 0 4rem;"&gt;
+    &lt;div class="container lesson-content-wrapper"&gt;
+        &lt;!-- ALL lesson components go here --&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Lesson Header</h3>
+                        <p class="ref-component-description">
+                            Contains the lesson title, description, and metadata (read time, difficulty level, tags).
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Must Be Used Inside
+                            </div>
+                            <p>Must be within <span class="ref-highlight">.lesson-header-wrapper</span> inside a <span class="ref-highlight">.section</span>.</p>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Lesson Header Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;section class="section" style="padding-block: 2rem;"&gt;
+    &lt;div class="container lesson-header-wrapper"&gt;
+        &lt;h1 class="title-large"&gt;Lesson Title&lt;/h1&gt;
+        
+        &lt;p class="lesson-description text-medium font-normal"&gt;
+            Lesson description goes here. Explain what this lesson covers.
+        &lt;/p&gt;
+        
+        &lt;div class="lesson-meta"&gt;
+            &lt;span class="lesson-meta-item"&gt;
+                &lt;i class='bx bx-time-five'&gt;&lt;/i&gt;
+                &lt;span&gt;8 min read&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;span class="lesson-meta-item"&gt;
+                &lt;i class='bx bx-layer'&gt;&lt;/i&gt;
+                &lt;span&gt;Beginner&lt;/span&gt;
+            &lt;/span&gt;
+            &lt;span class="lesson-meta-item"&gt;
+                &lt;i class='bx bx-purchase-tag'&gt;&lt;/i&gt;
+                &lt;span&gt;HTML&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Lesson Part with Correct Spacing</h3>
+                        <p class="ref-component-description">
+                            A segmented section of a lesson with its own header and content. The <span class="ref-highlight">.lesson-part</span> class provides 4rem bottom margin to separate parts.
+                        </p>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Lesson Part Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-part"&gt;
+    &lt;div class="lesson-part-header"&gt;
+        &lt;span class="lesson-part-number"&gt;Part 1&lt;/span&gt;
+        &lt;h2 class="lesson-part-title title-small"&gt;Part Title&lt;/h2&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="lesson-part-content"&gt;
+        &lt;p class="text-base font-normal"&gt;
+            Your lesson content goes here.
+        &lt;/p&gt;
+        
+        &lt;!-- Additional components can go here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        
+                        <div class="ref-warning">
+                            <div class="ref-warning-title">
+                                <i class='bx bx-error'></i>
+                                Critical Spacing Requirements
+                            </div>
+                            <p><strong>⚠️ Must be inside lesson wrapper:</strong> Place within <span class="ref-highlight">.lesson-content-wrapper</span> for proper spacing.</p>
+                            <p><strong>⚠️ .lesson-part-content spacing:</strong> All child elements need <span class="ref-highlight">&gt; * + * { margin-top: 1.5rem; }</span> selector which only works inside this class.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Components -->
+        <section class="section" id="content-components" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">🎨 Content Components</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Info/Warning/Success Boxes with Correct Spacing</h3>
+                        <p class="ref-component-description">
+                            Styled boxes for displaying important information, warnings, or success messages. Must be inside <span class="ref-highlight">.lesson-part-content</span> for proper 1.5rem top margin.
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Required Parent Structure
+                            </div>
+                            <p>These boxes <strong>MUST</strong> be placed inside <span class="ref-highlight">.lesson-part-content</span> to get the automatic 1.5rem top margin from adjacent elements.</p>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Info Box Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-box lesson-box-info"&gt;
+    &lt;div class="lesson-box-icon"&gt;
+        &lt;i class='bx bx-info-circle'&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="lesson-box-content"&gt;
+        &lt;h3 class="lesson-box-title"&gt;Box Title&lt;/h3&gt;
+        &lt;p&gt;Your important information goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Warning Box Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-box lesson-box-warning"&gt;
+    &lt;div class="lesson-box-icon"&gt;
+        &lt;i class='bx bx-error'&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="lesson-box-content"&gt;
+        &lt;h3 class="lesson-box-title"&gt;Warning Title&lt;/h3&gt;
+        &lt;p&gt;Your warning message goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Success Box Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-box lesson-box-success"&gt;
+    &lt;div class="lesson-box-icon"&gt;
+        &lt;i class='bx bx-check-circle'&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="lesson-box-content"&gt;
+        &lt;h3 class="lesson-box-title"&gt;Success Title&lt;/h3&gt;
+        &lt;p&gt;Your success message goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Code Block with Spacing</h3>
+                        <p class="ref-component-description">
+                            Formatted code display with syntax highlighting and a label header. Gets proper spacing when inside <span class="ref-highlight">.lesson-part-content</span>.
+                        </p>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Code Block Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-code"&gt;
+    &lt;div class="lesson-code-header"&gt;
+        &lt;span class="lesson-code-label"&gt;HTML&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;pre class="lesson-code-block"&gt;&lt;code&gt;&lt;p&gt;Your code example here&lt;/p&gt;
+&lt;a href="#"&gt;Example link&lt;/a&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Step-by-Step Section with Flex Layout</h3>
+                        <p class="ref-component-description">
+                            Numbered steps for tutorials or procedures within a lesson. Uses flexbox layout with 1.5rem gap between steps.
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Parent Container Required
+                            </div>
+                            <p>Must be placed inside <span class="ref-highlight">.lesson-steps</span> container for the flex layout to work correctly.</p>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Complete Steps Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-steps"&gt;
+    &lt;div class="lesson-step"&gt;
+        &lt;div class="lesson-step-number"&gt;1&lt;/div&gt;
+        &lt;div class="lesson-step-content"&gt;
+            &lt;h3 class="lesson-step-title"&gt;Step Title&lt;/h3&gt;
+            &lt;p&gt;Step description and instructions.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="lesson-step"&gt;
+        &lt;div class="lesson-step-number"&gt;2&lt;/div&gt;
+        &lt;div class="lesson-step-content"&gt;
+            &lt;h3 class="lesson-step-title"&gt;Step Title&lt;/h3&gt;
+            &lt;p&gt;Step description and instructions.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card & Grid Components -->
+        <section class="section" id="card-grid" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">🃏 Card & Grid Components</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Complete Card Grid with Parent Structure</h3>
+                        <p class="ref-component-description">
+                            Responsive grid of cards for displaying related content items. Requires the grid container for proper layout and spacing.
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Required Grid Container
+                            </div>
+                            <p>Cards <strong>MUST</strong> be placed inside <span class="ref-highlight">.lesson-card-grid</span> container. This provides the responsive grid layout with 1.5rem gap.</p>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Complete Card Grid Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-card-grid"&gt;
+    &lt;div class="lesson-card"&gt;
+        &lt;div class="lesson-card-header"&gt;
+            &lt;i class='bx bx-code-alt'&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;h3 class="lesson-card-title"&gt;Card Title&lt;/h3&gt;
+        &lt;p class="lesson-card-text"&gt;
+            Card description text goes here.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="lesson-card"&gt;
+        &lt;div class="lesson-card-header"&gt;
+            &lt;i class='bx bx-list-ul'&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;h3 class="lesson-card-title"&gt;Card Title&lt;/h3&gt;
+        &lt;p class="lesson-card-text"&gt;
+            Card description text goes here.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="lesson-card"&gt;
+        &lt;div class="lesson-card-header"&gt;
+            &lt;i class='bx bx-check-circle'&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;h3 class="lesson-card-title"&gt;Card Title&lt;/h3&gt;
+        &lt;p class="lesson-card-text"&gt;
+            Card description text goes here.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        
+                        <div class="ref-warning">
+                            <div class="ref-warning-title">
+                                <i class='bx bx-error'></i>
+                                Critical Layout Requirements
+                            </div>
+                            <p><strong>⚠️ Grid container required:</strong> Individual cards will not layout correctly without the <span class="ref-highlight">.lesson-card-grid</span> parent.</p>
+                            <p><strong>⚠️ Card spacing:</strong> The 1.5rem gap between cards is defined in the grid container, not individual cards.</p>
+                            <p><strong>⚠️ Icon requirement:</strong> Each card must have an icon in the <span class="ref-highlight">.lesson-card-header</span> for proper styling.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Highlight Box with Flex Layout</h3>
+                        <p class="ref-component-description">
+                            A prominently styled box for highlighting key information or tips. Uses flexbox layout with 1rem gap.
+                        </p>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Highlight Box Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-highlight"&gt;
+    &lt;div class="lesson-highlight-icon"&gt;
+        &lt;i class='bx bx-bulb'&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="lesson-highlight-content"&gt;
+        &lt;h3 class="lesson-highlight-title"&gt;Remember This&lt;/h3&gt;
+        &lt;p&gt;Your highlighted information goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Components -->
+        <section class="section" id="interactive" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">🎯 Interactive Components</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Complete Practice Section with Wrapper</h3>
+                        <p class="ref-component-description">
+                            Interactive form for quizzes or practice exercises within lessons. Requires the practice wrapper for proper padding and styling.
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Required Parent Structure
+                            </div>
+                            <p>The form <strong>MUST</strong> be wrapped in <span class="ref-highlight">.lesson-practice</span> for proper padding (2rem), background, and border radius.</p>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Complete Practice Section Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-practice"&gt;
+    &lt;h3 class="lesson-practice-title title-small"&gt;Try It Yourself&lt;/h3&gt;
+    &lt;p class="text-base font-normal"&gt;
+        Instructions for the practice exercise.
+    &lt;/p&gt;
+    
+    &lt;form class="lesson-form"&gt;
+        &lt;div class="lesson-form-group"&gt;
+            &lt;label for="question1" class="lesson-form-label"&gt;
+                1. Question text here?
+            &lt;/label&gt;
+            &lt;input type="text" id="question1" name="question1" class="lesson-form-input"
+                placeholder="Your answer" /&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="lesson-form-group"&gt;
+            &lt;label for="code-practice" class="lesson-form-label"&gt;
+                2. Code practice question
+            &lt;/label&gt;
+            &lt;textarea id="code-practice" name="code-practice" class="lesson-form-textarea"
+                rows="4" placeholder="Your code here"&gt;&lt;/textarea&gt;
+            &lt;span class="lesson-form-hint"&gt;Additional hint text&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="lesson-form-group"&gt;
+            &lt;label class="lesson-form-label"&gt;
+                3. Multiple choice question
+            &lt;/label&gt;
+            &lt;div class="lesson-form-radio-group"&gt;
+                &lt;label class="lesson-form-radio"&gt;
+                    &lt;input type="radio" name="question3" value="option1" /&gt;
+                    &lt;span&gt;Option 1&lt;/span&gt;
+                &lt;/label&gt;
+                &lt;label class="lesson-form-radio"&gt;
+                    &lt;input type="radio" name="question3" value="option2" /&gt;
+                    &lt;span&gt;Option 2&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="lesson-form-actions"&gt;
+            &lt;button type="submit" class="btn btn-primary"&gt;Submit Answers&lt;/button&gt;
+            &lt;button type="reset" class="btn btn-darken"&gt;Reset&lt;/button&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Success Message (hidden by default) --&gt;
+        &lt;div class="lesson-form-message lesson-form-success" style="display: none;"&gt;
+            &lt;i class='bx bx-check-circle'&gt;&lt;/i&gt;
+            &lt;span&gt;Success message&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;!-- Error Message (hidden by default) --&gt;
+        &lt;div class="lesson-form-message lesson-form-error" style="display: none;"&gt;
+            &lt;i class='bx bx-error-circle'&gt;&lt;/i&gt;
+            &lt;span&gt;Error message&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        
+                        <div class="ref-warning">
+                            <div class="ref-warning-title">
+                                <i class='bx bx-error'></i>
+                                Critical Form Requirements
+                            </div>
+                            <p><strong>⚠️ .lesson-practice wrapper required:</strong> Without this wrapper, the form lacks proper padding and background styling.</p>
+                            <p><strong>⚠️ Form group spacing:</strong> Each <span class="ref-highlight">.lesson-form-group</span> provides 1.5rem bottom margin automatically.</p>
+                            <p><strong>⚠️ JavaScript required:</strong> Form validation and message display requires the JavaScript from the base template.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Lesson Navigation with Grid Container</h3>
+                        <p class="ref-component-description">
+                            Previous/Next navigation buttons for moving between lessons. Requires the navigation grid container for proper layout.
+                        </p>
+                        
+                        <div class="ref-requirements">
+                            <div class="ref-requirements-title">
+                                <i class='bx bx-check-circle'></i>
+                                Required Grid Container
+                            </div>
+                            <p>Navigation buttons <strong>MUST</strong> be inside <span class="ref-highlight">.lesson-navigation</span> which provides the grid layout with 1.5rem gap.</p>
+                        </div>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Complete Navigation Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;section class="section" style="padding-block: 2rem 4rem;"&gt;
+    &lt;div class="container"&gt;
+        &lt;nav class="lesson-navigation"&gt;
+            &lt;a href="previous-lesson.html" class="lesson-nav-btn lesson-nav-prev"&gt;
+                &lt;span class="lesson-nav-label"&gt;
+                    &lt;i class='bx bx-chevron-left'&gt;&lt;/i&gt;
+                    Previous
+                &lt;/span&gt;
+                &lt;span class="lesson-nav-title"&gt;Previous Lesson Title&lt;/span&gt;
+            &lt;/a&gt;
+            
+            &lt;a href="next-lesson.html" class="lesson-nav-btn lesson-nav-next"&gt;
+                &lt;span class="lesson-nav-label"&gt;
+                    Next
+                    &lt;i class='bx bx-chevron-right'&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;span class="lesson-nav-title"&gt;Next Lesson Title&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Section -->
+        <section class="section" id="summary" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">📝 Summary Components</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Lesson Summary with Wrapper</h3>
+                        <p class="ref-component-description">
+                            Summary section at the end of a lesson listing key takeaways. Requires the summary wrapper for proper styling.
+                        </p>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Complete Summary Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-summary"&gt;
+    &lt;h2 class="lesson-summary-title title-medium"&gt;What You Learned&lt;/h2&gt;
+    &lt;div class="lesson-summary-content"&gt;
+        &lt;ul class="lesson-summary-list"&gt;
+            &lt;li&gt;First key takeaway&lt;/li&gt;
+            &lt;li&gt;Second key takeaway&lt;/li&gt;
+            &lt;li&gt;Third key takeaway&lt;/li&gt;
+            &lt;li&gt;Fourth key takeaway&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Quote Block with Styled Wrapper</h3>
+                        <p class="ref-component-description">
+                            Styled blockquote for displaying inspirational or relevant quotes. Requires the quote wrapper for proper padding and styling.
+                        </p>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Complete Quote Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-quote"&gt;
+    &lt;div class="lesson-quote-icon"&gt;
+        &lt;i class='bx bxs-quote-alt-left'&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;blockquote class="lesson-quote-text"&gt;
+        "Your quote text goes here. Make it inspirational or relevant to the lesson."
+    &lt;/blockquote&gt;
+    &lt;p class="lesson-quote-author"&gt;— Author Name&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Components -->
+        <section class="section" id="media" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">🖼️ Media Components</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Media Block with Proper Spacing</h3>
+                        <p class="ref-component-description">
+                            Image display with caption for lesson illustrations, diagrams, or screenshots. Has automatic top/bottom margins.
+                        </p>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Media Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-media"&gt;
+    &lt;img src="../img_src/example.jpg" alt="Description of image" class="lesson-media-img" /&gt;
+    &lt;p class="lesson-media-caption text-small"&gt;
+        Caption explaining the image or diagram.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        
+                        <div class="ref-warning">
+                            <div class="ref-warning-title">
+                                <i class='bx bx-error'></i>
+                                Media Requirements
+                            </div>
+                            <p><strong>⚠️ Automatic spacing:</strong> The <span class="ref-highlight">.lesson-media</span> class provides 2rem vertical margins automatically.</p>
+                            <p><strong>⚠️ Image path:</strong> Update <span class="ref-highlight">src</span> attribute to point to your image file.</p>
+                            <p><strong>⚠️ Alt text required:</strong> Always include descriptive alt text for accessibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider Component -->
+        <section class="section" style="padding-block: 0 4rem;">
+            <div class="container ref-container">
+                <div class="ref-section-wrapper">
+                    <h2 class="ref-section-title">➖ Separator Components</h2>
+                    
+                    <div class="ref-component-card">
+                        <h3 class="ref-component-title">Lesson Divider</h3>
+                        <p class="ref-component-description">
+                            Horizontal divider for separating major sections within a lesson. Provides 3rem vertical spacing.
+                        </p>
+                        
+                        <div class="ref-code-block">
+                            <div class="ref-code-header">
+                                <span class="ref-code-label">Divider Template</span>
+                                <button class="ref-copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                            <pre class="ref-code-content"><code>&lt;div class="lesson-divider"&gt;&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="section" style="padding-block: 2rem 4rem;">
+            <div class="container ref-container">
+                <div class="ref-footer">
+                    <p><strong>Design System Reference</strong> - Code Without Crying</p>
+                    <p>All components require the base template and associated CSS/JS files to function correctly.</p>
+                    <p class="text-small" style="margin-top: 1rem; color: #64748b;">Remember: Always copy the complete component structure including required parent wrappers for proper spacing and layout.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS -->
+    <script src="../script_src/index.js"></script>
+    
+    <!-- Copy Functionality -->
+    <script>
+        function copyCode(button) {
+            const codeBlock = button.closest('.ref-code-block').querySelector('.ref-code-content');
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                button.textContent = 'Failed to copy';
+                setTimeout(() => {
+                    button.textContent = 'Copy Code';
+                }, 2000);
+            });
+        }
+        
+        // Add IDs to sections for TOC linking
+        document.addEventListener('DOMContentLoaded', function() {
+            const tocLinks = document.querySelectorAll('.ref-toc-link');
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Syntax - Code Without Crying</title>
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css_src/index.css" />
+
+    <!-- Lesson CSS -->
+    <link rel="stylesheet" href="template_main.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="../index.html" class="brand">
+                <svg width="64" height="32" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="24" font-family="monospace" font-size="24" font-weight="700" fill="currentColor">
+                        !&lt;
+                    </text>
+                </svg>
+            </a>
+
+            <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+
+            <div class="menu" id="menu">
+                <ul class="menu-inner">
+                    <li class="menu-item"><a href="../index.html" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="lessons.html" class="menu-link">Lessons</a></li>
+                    <li class="menu-item"><a href="how_it_works.html" class="menu-link">How It Works</a></li>
+                    <li class="menu-item"><a href="about.html" class="menu-link">About</a></li>
+                </ul>
+            </div>
+
+            <span class="overlay"></span>
+
+            <button type="button" class="menu-block">
+                <a href="lessons.html" class="btn btn-neutral">All Lessons</a>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Breadcrumb Navigation -->
+        <section class="section" style="padding-block: 5rem 0;">
+            <div class="container">
+                <nav class="lesson-breadcrumb">
+                    <a href="../index.html" class="breadcrumb-link">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <a href="lessons.html" class="breadcrumb-link">Lessons</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">HTML Syntax</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Lesson Header -->
+        <section class="section" style="padding-block: 2rem;">
+            <div class="container lesson-header-wrapper">
+                <!-- EDIT: Lesson title -->
+                <h1 class="title-large">HTML Syntax</h1>
+
+                <!-- EDIT: Lesson description -->
+                <p class="lesson-description text-medium font-normal">
+                    Understanding the basic structure and rules of writing HTML code.
+                    Learn how elements work, what tags are, and how to write valid HTML.
+                </p>
+
+                <!-- EDIT: Lesson metadata -->
+                <div class="lesson-meta">
+                    <span class="lesson-meta-item">
+                        <i class='bx bx-time-five'></i>
+                        <span>8 min read</span>
+                    </span>
+                    <span class="lesson-meta-item">
+                        <i class='bx bx-layer'></i>
+                        <span>Beginner</span>
+                    </span>
+                    <span class="lesson-meta-item">
+                        <i class='bx bx-purchase-tag'></i>
+                        <span>HTML</span>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson Content Area -->
+        <section class="section" style="padding-block: 0 4rem;">
+            <div class="container lesson-content-wrapper">
+
+                <!-- ============================================ -->
+                <!-- EDIT LESSON CONTENT BELOW THIS LINE -->
+                <!-- ============================================ -->
+
+                <!-- Lesson Part 1 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 1</span>
+                        <h2 class="lesson-part-title title-small">What is HTML Syntax?</h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            HTML syntax refers to the rules and structure for writing HTML code.
+                            Every HTML document follows a specific pattern that browsers understand.
+                            Think of it like grammar rules for a language, but for web pages.
+                        </p>
+
+                        <!-- Info Box -->
+                        <div class="lesson-box lesson-box-info">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-info-circle'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Key Point</h3>
+                                <p>HTML uses tags to define elements. Tags are wrapped in angle brackets like
+                                    <code>&lt;tag&gt;</code>. Most tags come in pairs: an opening tag and a closing
+                                    tag.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Code Block -->
+                        <div class="lesson-code">
+                            <div class="lesson-code-header">
+                                <span class="lesson-code-label">Example</span>
+                            </div>
+                            <pre class="lesson-code-block"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;h1&gt;This is a heading.&lt;/h1&gt;
+&lt;a href="page.html"&gt;This is a link.&lt;/a&gt;</code></pre>
+                        </div>
+
+                        <p class="text-base font-normal">
+                            Notice how each element has an opening tag and a closing tag. The closing tag includes a
+                            forward slash <code>/</code> before the tag name.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Lesson Part 2 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 2</span>
+                        <h2 class="lesson-part-title title-small">Anatomy of an HTML Element</h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+
+                        <!-- Step-by-step Section -->
+                        <div class="lesson-steps">
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">1</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Opening Tag</h3>
+                                    <p>The opening tag marks the beginning of an element. Example:
+                                        <code>&lt;div&gt;</code>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">2</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Content</h3>
+                                    <p>The content goes between the opening and closing tags. This is what users see on
+                                        the page.</p>
+                                </div>
+                            </div>
+
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">3</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Closing Tag</h3>
+                                    <p>The closing tag ends the element. It looks like the opening tag but with a
+                                        forward slash: <code>&lt;/div&gt;</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Warning Box -->
+                        <div class="lesson-box lesson-box-warning">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-error'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Common Mistake</h3>
+                                <p>Forgetting to close tags is a common error. Always make sure every opening tag has a
+                                    matching closing tag, except for self-closing tags like
+                                    <code>&lt;img /&gt;</code> or <code>&lt;br /&gt;</code>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card Grid -->
+                        <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-code-alt'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Nested Elements</h3>
+                                <p class="lesson-card-text">
+                                    Elements can be placed inside other elements. This is called nesting.
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-list-ul'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Attributes</h3>
+                                <p class="lesson-card-text">
+                                    Attributes provide additional information about elements, like <code>href</code> in
+                                    links.
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-check-circle'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Self-Closing Tags</h3>
+                                <p class="lesson-card-text">
+                                    Some tags don't need a closing tag, like <code>&lt;img /&gt;</code> and
+                                    <code>&lt;br /&gt;</code>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lesson Part 3 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 3</span>
+                        <h2 class="lesson-part-title title-small">HTML Attributes</h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            Attributes provide extra information about HTML elements. They're always specified in the
+                            opening tag and usually come in name/value pairs.
+                        </p>
+
+                        <div class="lesson-code">
+                            <div class="lesson-code-header">
+                                <span class="lesson-code-label">HTML</span>
+                            </div>
+                            <pre class="lesson-code-block"><code>&lt;a href="https://example.com" target="_blank"&gt;
+  Visit Example
+&lt;/a&gt;
+
+&lt;img src="photo.jpg" alt="Description" width="500" /&gt;
+
+&lt;div class="container" id="main"&gt;
+  Content here
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <!-- Highlight Box -->
+                        <div class="lesson-highlight">
+                            <div class="lesson-highlight-icon">
+                                <i class='bx bx-bulb'></i>
+                            </div>
+                            <div class="lesson-highlight-content">
+                                <h3 class="lesson-highlight-title">Remember This</h3>
+                                <p>Attributes always follow the pattern: <code>attribute="value"</code>. The value is
+                                    wrapped in quotes.</p>
+                            </div>
+                        </div>
+
+                        <!-- Media Placeholder -->
+                        <div class="lesson-media">
+                            <img src="../img_src/hero.jpeg" alt="HTML syntax diagram" class="lesson-media-img" />
+                            <p class="lesson-media-caption text-small">
+                                Example of HTML element structure with attributes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lesson Part 4 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 4</span>
+                        <h2 class="lesson-part-title title-small">Practice Time</h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+
+                        <!-- Success Box -->
+                        <div class="lesson-box lesson-box-success">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-check-circle'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">You're Ready!</h3>
+                                <p>You now understand HTML syntax. Time to put your knowledge to practice with the
+                                    exercise below.</p>
+                            </div>
+                        </div>
+
+                        <!-- Quote Block -->
+                        <div class="lesson-quote">
+                            <div class="lesson-quote-icon">
+                                <i class='bx bxs-quote-alt-left'></i>
+                            </div>
+                            <blockquote class="lesson-quote-text">
+                                "The best way to learn HTML is by writing it. Make mistakes, fix them, and learn from
+                                the process."
+                            </blockquote>
+                            <p class="lesson-quote-author">— Every Web Developer Ever</p>
+                        </div>
+
+                        <!-- Practice Form -->
+                        <div class="lesson-practice">
+                            <h3 class="lesson-practice-title title-small">Try It Yourself</h3>
+                            <p class="text-base font-normal">
+                                Complete this short quiz to test your understanding of HTML syntax.
+                            </p>
+
+                            <form class="lesson-form">
+                                <div class="lesson-form-group">
+                                    <label for="question1" class="lesson-form-label">
+                                        1. What do HTML tags use to wrap element names?
+                                    </label>
+                                    <input type="text" id="question1" name="question1" class="lesson-form-input"
+                                        placeholder="Your answer" />
+                                </div>
+
+                                <div class="lesson-form-group">
+                                    <label for="question2" class="lesson-form-label">
+                                        2. Write the closing tag for &lt;div&gt;
+                                    </label>
+                                    <input type="text" id="question2" name="question2" class="lesson-form-input"
+                                        placeholder="Your answer" />
+                                </div>
+
+                                <div class="lesson-form-group">
+                                    <label for="code-practice" class="lesson-form-label">
+                                        3. Write a complete paragraph element with text
+                                    </label>
+                                    <textarea id="code-practice" name="code-practice" class="lesson-form-textarea"
+                                        rows="4" placeholder="<p>Your code here</p>"></textarea>
+                                    <span class="lesson-form-hint">Write valid HTML code</span>
+                                </div>
+
+                                <div class="lesson-form-group">
+                                    <label class="lesson-form-label">
+                                        4. Which of these is a self-closing tag?
+                                    </label>
+                                    <div class="lesson-form-radio-group">
+                                        <label class="lesson-form-radio">
+                                            <input type="radio" name="question4" value="div" />
+                                            <span>&lt;div&gt;</span>
+                                        </label>
+                                        <label class="lesson-form-radio">
+                                            <input type="radio" name="question4" value="img" />
+                                            <span>&lt;img /&gt;</span>
+                                        </label>
+                                        <label class="lesson-form-radio">
+                                            <input type="radio" name="question4" value="p" />
+                                            <span>&lt;p&gt;</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="lesson-form-actions">
+                                    <button type="submit" class="btn btn-primary">Submit Answers</button>
+                                    <button type="reset" class="btn btn-darken">Reset</button>
+                                </div>
+
+                                <!-- Form Success State (Hidden by default, shown after submission) -->
+                                <div class="lesson-form-message lesson-form-success" style="display: none;">
+                                    <i class='bx bx-check-circle'></i>
+                                    <span>Great work! All answers submitted successfully.</span>
+                                </div>
+
+                                <!-- Form Error State (Hidden by default, shown on error) -->
+                                <div class="lesson-form-message lesson-form-error" style="display: none;">
+                                    <i class='bx bx-error-circle'></i>
+                                    <span>Please answer all questions before submitting.</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Divider -->
+                <div class="lesson-divider"></div>
+
+                <!-- Summary Section -->
+                <div class="lesson-summary">
+                    <h2 class="lesson-summary-title title-medium">What You Learned</h2>
+                    <div class="lesson-summary-content">
+                        <ul class="lesson-summary-list">
+                            <li>HTML uses tags wrapped in angle brackets to define elements</li>
+                            <li>Most elements have opening and closing tags</li>
+                            <li>Attributes provide additional information about elements</li>
+                            <li>Elements can be nested inside other elements</li>
+                            <li>Some tags are self-closing and don't need a closing tag</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ============================================ -->
+                <!-- EDIT LESSON CONTENT ABOVE THIS LINE -->
+                <!-- ============================================ -->
+
+            </div>
+        </section>
+
+        <!-- Lesson Navigation (Previous/Next) -->
+        <section class="section" style="padding-block: 2rem 4rem;">
+            <div class="container">
+                <nav class="lesson-navigation">
+                    <!-- EDIT: Update href and remove if first lesson -->
+                    <a href="#" class="lesson-nav-btn lesson-nav-prev">
+                        <span class="lesson-nav-label">
+                            <i class='bx bx-chevron-left'></i>
+                            Previous
+                        </span>
+                        <span class="lesson-nav-title">Introduction to HTML</span>
+                    </a>
+
+                    <!-- EDIT: Update href and remove if last lesson -->
+                    <a href="#" class="lesson-nav-btn lesson-nav-next">
+                        <span class="lesson-nav-label">
+                            Next
+                            <i class='bx bx-chevron-right'></i>
+                        </span>
+                        <span class="lesson-nav-title">HTML Tags & Elements</span>
+                    </a>
+                </nav>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="../script_src/index.js"></script>
+
+    <!-- Lesson Form Handler (Minimal) -->
+    <script>
+        const lessonForm = document.querySelector('.lesson-form');
+        if (lessonForm) {
+            lessonForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const successMsg = this.querySelector('.lesson-form-success');
+                const errorMsg = this.querySelector('.lesson-form-error');
+
+                // Simple validation
+                const inputs = this.querySelectorAll('input[type="text"], textarea');
+                let allFilled = true;
+                inputs.forEach(input => {
+                    if (!input.value.trim()) allFilled = false;
+                });
+
+                if (allFilled) {
+                    errorMsg.style.display = 'none';
+                    successMsg.style.display = 'flex';
+                } else {
+                    successMsg.style.display = 'none';
+                    errorMsg.style.display = 'flex';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

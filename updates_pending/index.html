@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Master programming with bite-sized lessons. No tears, just clarity.">
+    <title>Code Without Crying - Programming Made Simple</title>
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand" aria-label="Code Without Crying Home">
+                <span class="brand-icon">!&lt;</span>
+                <span class="brand-text">CWC</span>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="menu" id="menu">
+                <ul class="menu-inner">
+                    <li class="menu-item"><a href="index.html" class="menu-link" aria-current="page">Home</a></li>
+                    <li class="menu-item"><a href="html_src/lessons.html" class="menu-link">Lessons</a></li>
+                    <li class="menu-item"><a href="html_src/how_it_works.html" class="menu-link">How It Works</a></li>
+                    <li class="menu-item"><a href="html_src/about.html" class="menu-link">About</a></li>
+                </ul>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="menu-block">
+                <a href="html_src/lessons.html" class="btn btn-primary-outline">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="hero-grid"></div>
+                <div class="hero-gradient"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Main Content -->
+                    <div class="hero-text-wrapper">
+                        <div class="hero-badge">
+                            <i class='bx bx-code-alt'></i>
+                            <span>Learn Programming Simply</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Master Code,<br>
+                            <span class="hero-title-gradient">One Lesson</span> at a Time
+                        </h1>
+
+                        <p class="hero-description">
+                            Skip the overwhelm. Our bite-sized lessons break down complex programming concepts into 
+                            digestible 5-minute reads. Learn what matters, when it matters.
+                        </p>
+
+                        <div class="hero-cta">
+                            <a href="html_src/lessons.html" class="btn btn-primary btn-large">
+                                Start Learning Free
+                                <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                            <a href="html_src/how_it_works.html" class="btn btn-ghost btn-large">
+                                How It Works
+                            </a>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <div class="hero-stat-number">X</div>
+                                <div class="hero-stat-label">Lessons</div>
+                            </div>
+                            <div class="hero-stat-divider"></div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-number">5min</div>
+                                <div class="hero-stat-label">Per Lesson</div>
+                            </div>
+                            <div class="hero-stat-divider"></div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-number">100%</div>
+                                <div class="hero-stat-label">Free</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual -->
+                    <div class="hero-visual">
+                        <div class="hero-card hero-card-1">
+                            <div class="hero-card-header">
+                                <div class="hero-card-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="hero-card-content">
+                                <div class="code-line"><span class="code-keyword">function</span> <span class="code-function">learn</span>() {</div>
+                                <div class="code-line indent-1"><span class="code-keyword">return</span> <span class="code-string">"clarity"</span>;</div>
+                                <div class="code-line">}</div>
+                            </div>
+                        </div>
+
+                        <div class="hero-card hero-card-2">
+                            <div class="hero-card-icon">
+                                <i class='bx bx-check-circle'></i>
+                            </div>
+                            <div class="hero-card-text">
+                                <div class="hero-card-title">Lesson Complete</div>
+                                <div class="hero-card-subtitle">Variables & Data Types</div>
+                            </div>
+                        </div>
+
+                        <div class="hero-floating-element hero-float-1">
+                            <i class='bx bxs-zap'></i>
+                        </div>
+                        <div class="hero-floating-element hero-float-2">
+                            <i class='bx bxs-star'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <aside class="hero-social" aria-label="Social media links">
+                <a href="https://github.com/ofx-proton/Code-Without-Crying.git" 
+                   class="hero-social-link" 
+                   aria-label="GitHub"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="#" class="hero-social-link" aria-label="Email">
+                    <i class="bx bxl-gmail"></i>
+                </a>
+                <a href="#" class="hero-social-link" aria-label="Community">
+                    <i class="bx bx-chat"></i>
+                </a>
+            </aside>
+
+            <!-- Scroll Indicator -->
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="../script_src/index.js"></script>
+</body>
+
+</html>
