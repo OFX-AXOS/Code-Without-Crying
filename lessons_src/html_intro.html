@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML Beginner Syntax</title>
+    <title>HTML Tags — The Bare Minimum That Actually Works</title>
 
     <!-- Boxicons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -17,8 +17,6 @@
 </head>
 
 <body>
-
-    <!-- Header -->
     <header class="header" id="header">
         <nav class="navbar container">
             <a href="../index.html" class="brand">
@@ -52,8 +50,6 @@
     </header>
 
     <main class="main">
-
-        <!-- Breadcrumb -->
         <section class="section" style="padding-block: 5rem 0;">
             <div class="container">
                 <nav class="lesson-breadcrumb">
@@ -61,117 +57,377 @@
                     <span class="breadcrumb-separator">/</span>
                     <a href="../html_src/lessons.html" class="breadcrumb-link">Lessons</a>
                     <span class="breadcrumb-separator">/</span>
-                    <span class="breadcrumb-current">HTML Intro</span>
+                    <span class="breadcrumb-current">HTML Basics</span>
                 </nav>
             </div>
-        </section>
 
-        <!-- Lesson -->
-        <section class="section" style="padding-block: 2rem;">
-            <div class="container lesson-header-wrapper">
+            <section class="section" style="padding-block: 0 4rem;">
+                <div class="container lesson-content-wrapper">
 
-                <h1 class="title-large">
-                    HTML Introduction (a.k.a. Talking Nicely to Browsers)
-                </h1>
+                    <section class="section" style="padding-block: 2rem;">
+                        <div class="container lesson-header-wrapper">
 
-                <p class="lesson-description text-medium font-normal">
-                    HTML is not hacking.
-                    It is not magic.
-                    It is you describing content to a browser and hoping it behaves.
-                    Sometimes it does.
-                </p>
+                            <h1 class="title-large">
+                                HTML Introduction: The Talk Before the Tags
+                            </h1>
 
-                <div class="lesson-meta">
-                    <span class="lesson-meta-item">
-                        <i class='bx bx-time-five'></i>
-                        <span>~7 min (no refunds)</span>
-                    </span>
-                    <span class="lesson-meta-item">
-                        <i class='bx bx-layer'></i>
-                        <span>Beginner</span>
-                    </span>
-                    <span class="lesson-meta-item">
-                        <i class='bx bx-purchase-tag'></i>
-                        <span>HTML</span>
-                    </span>
-                </div>
-
-                <!-- PART 1 -->
-                <div class="lesson-part">
-                    <div class="lesson-part-header">
-                        <span class="lesson-part-number">Part 1</span>
-                        <h2 class="lesson-part-title title-small">
-                            HTML Tags: Tiny Brackets, Serious Consequences
-                        </h2>
-                    </div>
-
-                    <div class="lesson-part-content">
-
-                        <p class="text-base font-normal">
-                            HTML stands for <strong>HyperText Markup Language</strong>.
-                            It sounds dramatic.
-                            In practice, it just labels things so browsers do not guess and embarrass themselves.
-                        </p>
-
-                        <!-- Info -->
-                        <div class="lesson-box lesson-box-info">
-                            <div class="lesson-box-icon">
-                                <i class='bx bx-info-circle'></i>
-                            </div>
-                            <div class="lesson-box-content">
-                                <h3 class="lesson-box-title">HTML Tag Lore</h3>
-                                <p>
-                                    Tags look like <code>&lt;p&gt;</code>.
-                                    Most of them need a matching <code>&lt;/p&gt;</code>.
-                                    Forget it, and the browser will invent structure.
-                                    Poorly.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Code -->
-                        <div class="lesson-code">
-                            <div class="lesson-code-header">
-                                <span class="lesson-code-label">HTML</span>
-                            </div>
-                            <pre class="lesson-code-block"><code>&lt;h1&gt;Hello World&lt;/h1&gt;
-&lt;p&gt;This is HTML. I am learning.&lt;/p&gt;</code></pre>
-                        </div>
-
-                        <!-- VS Code Tip -->
-                        <div class="lesson-box lesson-box-info">
-                            <div class="lesson-box-icon">
-                                <i class='bx bx-bulb'></i>
-                            </div>
-                            <div class="lesson-box-content">
-                                <h3 class="lesson-box-title">VS Code Cheat Code</h3>
-                                <p>
-                                    Create a file named <code>index.html</code>.
-                                    Type <strong>!</strong> and press <strong>Enter</strong>.
-                                    VS Code generates the boilerplate because typing it manually is pointless.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="lesson-code">
-                            <div class="lesson-code-header">
-                                <span class="lesson-code-label">Type This</span>
-                            </div>
-                            <pre class="lesson-code-block"><code>!</code></pre>
-                        </div>
-
-                        <div class="lesson-media">
-                            <img src="../img_src/!.png" alt="Emmet expansion in VS Code" class="lesson-media-img" />
-                            <p class="lesson-media-caption text-small">
-                                Emmet expanding shorthand into responsibility.
+                            <p class="lesson-description text-medium font-normal">
+                                This is the lesson that comes <em>before</em> tags. Yes, there's something before tags.
+                                <br><br>
+                                It's like reading the instructions before assembling furniture.
+                                Everyone skips it, then wonders why their chair has three legs.
+                                <br><br>
+                                Read this. Save yourself from three-legged websites.
+                                No shame. Just facts.
                             </p>
-                        </div>
 
-                        <div class="lesson-code">
-                            <div class="lesson-code-header">
-                                <span class="lesson-code-label">Instant Result</span>
+                            <div class="lesson-meta">
+                                <span class="lesson-meta-item">
+                                    <i class='bx bx-time-five'></i>
+                                    <span>4 min read (6 if you actually think about it)</span>
+                                </span>
+                                <span class="lesson-meta-item">
+                                    <i class='bx bx-layer'></i>
+                                    <span>Absolute Beginner (zero to hero, minus the hero part)</span>
+                                </span>
+                                <span class="lesson-meta-item">
+                                    <i class='bx bx-purchase-tag'></i>
+                                    <span>HTML (the stuff before the tags)</span>
+                                </span>
                             </div>
-                            <pre class="lesson-code-block"><code>&lt;!DOCTYPE html&gt;
+
+                            <div class="lesson-divider"></div>
+
+                            <!-- PART 1 -->
+                            <section class="section" style="padding-block: 0 4rem;">
+                                <div class="container lesson-content-wrapper">
+
+
+                                    <div class="lesson-part">
+                                        <div class="lesson-part-header">
+                                            <span class="lesson-part-number">Part 1</span>
+                                            <h2 class="lesson-part-title title-small">
+                                                What Is HTML? (No, Seriously)
+                                            </h2>
+                                        </div>
+
+                                        <div class="lesson-part-content">
+                                            <p class="text-base font-normal">
+                                                HTML stands for HyperText Markup Language.
+                                                <br><br>
+                                                That's a fancy way of saying:
+                                                "It tells browsers what's a heading, what's a paragraph,
+                                                and what's a link that goes nowhere."
+                                                <br><br>
+                                                Think of HTML as the skeleton of a website.
+                                                CSS is the skin and clothes.
+                                                JavaScript is the personality (sometimes annoying).
+                                            </p>
+
+                                            <div class="lesson-card-grid">
+
+                                                <div class="lesson-card">
+                                                    <div class="lesson-card-header">
+                                                        <i class='bx bx-bone'></i>
+                                                    </div>
+                                                    <h3 class="lesson-card-title">The Skeleton</h3>
+                                                    <p class="lesson-card-text">
+                                                        HTML = Structure
+                                                        <br>
+                                                        Without it, your website is just... content soup.
+                                                        Nobody wants content soup.
+                                                    </p>
+                                                </div>
+
+                                                <div class="lesson-card">
+                                                    <div class="lesson-card-header">
+                                                        <i class='bx bx-palette'></i>
+                                                    </div>
+                                                    <h3 class="lesson-card-title">The Pretty Part</h3>
+                                                    <p class="lesson-card-text">
+                                                        CSS = Style
+                                                        <br>
+                                                        Makes the skeleton look less... skeletal.
+                                                        Important, but not first.
+                                                    </p>
+                                                </div>
+
+                                                <div class="lesson-card">
+                                                    <div class="lesson-card-header">
+                                                        <i class='bx bx-brain'></i>
+                                                    </div>
+                                                    <h3 class="lesson-card-title">The Brain</h3>
+                                                    <p class="lesson-card-text">
+                                                        JavaScript = Behavior
+                                                        <br>
+                                                        Makes things move, click, and do stuff.
+                                                        Can't work without HTML first.
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="lesson-highlight">
+                                                <div class="lesson-highlight-icon">
+                                                    <i class='bx bx-bulb'></i>
+                                                </div>
+                                                <div class="lesson-highlight-content">
+                                                    <h3 class="lesson-highlight-title">The Hard Truth</h3>
+                                                    <p>
+                                                        You can have a website with only HTML.
+                                                        You cannot have a website with only CSS or JavaScript.
+                                                        <br><br>
+                                                        HTML is the foundation. Everything else is decoration.
+                                                        Decorate a bad foundation = still bad.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="lesson-code">
+                                                <div class="lesson-code-header">
+                                                    <span class="lesson-code-label">The Simplest HTML Ever</span>
+                                                </div>
+                                                <pre class="lesson-code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is a website. It's not much, but it's honest work.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                            </div>
+
+                                            <div class="lesson-box lesson-box-info">
+                                                <div class="lesson-box-icon">
+                                                    <i class='bx bx-info-circle'></i>
+                                                </div>
+                                                <div class="lesson-box-content">
+                                                    <h3 class="lesson-box-title">The !DOCTYPE Thing</h3>
+                                                    <p>
+                                                        That <code>&lt;!DOCTYPE html&gt;</code> at the top?
+                                                        It's not a tag. It's a declaration.
+                                                        <br>
+                                                        It tells the browser: "Hey, this is HTML5. Act accordingly."
+                                                        <br>
+                                                        Without it, browsers get confused. Confused browsers = bad
+                                                        times.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="lesson-divider"></div>
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <!-- PART 2 -->
+                            <section class="section" style="padding-block: 0 4rem;">
+                                <div class="container lesson-content-wrapper">
+                                    <div class="lesson-part">
+                                        <div class="lesson-part-header">
+                                            <span class="lesson-part-number">Part 2</span>
+                                            <h2 class="lesson-part-title title-small">
+                                                How HTML Actually Works (The Magic Part)
+                                            </h2>
+                                        </div>
+
+                                        <div class="lesson-part-content">
+                                            <p class="text-base font-normal">
+                                                HTML files are just text files. Seriously.
+                                                <br>
+                                                You write text with angle brackets, save it as .html,
+                                                and browsers turn it into websites.
+                                                <br>
+                                                It's like magic, but with more typing and less wand-waving.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="lesson-box lesson-box-info">
+                                        <div class="lesson-box-icon">
+                                            <i class='bx bx-brain'></i>
+                                        </div>
+                                        <div class="lesson-box-content">
+                                            <h3 class="lesson-box-title">The Browser's Job</h3>
+
+                                            <p>
+                                                1. You give browser an HTML file<br>
+                                                2. Browser reads it (like a really fast robot)<br>
+                                                3. Browser builds a "DOM tree" (fancy family tree of elements)<br>
+                                                4. Browser displays it<br>
+                                                5. You complain about how it looks (that's where CSS comes in)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="lesson-highlight">
+                                        <div class="lesson-highlight-icon">
+                                            <i class='bx bx-code-alt'></i>
+                                        </div>
+                                        <div class="lesson-highlight-content">
+                                            <h3 class="lesson-highlight-title">The Two Rules of HTML</h3>
+                                            <p>
+                                                <strong>Rule 1:</strong> Everything goes between &lt;html&gt; and
+                                                &lt;/html&gt;<br>
+                                                <strong>Rule 2:</strong> Visible stuff goes between &lt;body&gt; and
+                                                &lt;/body&gt;<br><br>
+                                                That's it. Follow these two rules, and you're 80% there.
+                                                The other 20% is remembering to close your tags.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="lesson-box lesson-box-warning">
+                                        <div class="lesson-box-icon">
+                                            <i class='bx bx-error'></i>
+                                        </div>
+                                        <div class="lesson-box-content">
+                                            <h3 class="lesson-box-title">Common Beginner Mistakes</h3>
+                                            <p>
+                                                1. Forgetting to close tags (browsers hate this)<br>
+                                                2. Putting content in the &lt;head&gt; (it won't show up)<br>
+                                                3. Missing the !DOCTYPE (confuses old browsers)<br>
+                                                4. Using spaces in file names (just don't)<br>
+                                                5. Saving as .txt instead of .html (happens to everyone)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="lesson-part">
+                                        <div class="lesson-part-header">
+                                            <h2 class="lesson-part-title title-small">Your First HTML File (For Real)
+                                            </h2>
+                                        </div>
+
+                                        <div class="lesson-part-content">
+                                            <p class="text-base font-normal">
+                                                Let's actually make something. Right now.
+                                                <br>
+                                                Open Notepad (or any text editor). Type this.
+                                                Save it as "myfirstwebsite.html"
+                                                Double-click it. Boom. Website.
+                                            </p>
+                                            <br>
+
+                                            <div class="lesson-steps">
+                                                <div class="lesson-card-grid">
+
+                                                    <div class="lesson-step">
+                                                        <div class="lesson-step-number">1</div>
+                                                        <div class="lesson-step-content">
+                                                            <h3 class="lesson-step-title">Open Text Editor</h3>
+                                                            <p>
+                                                                Notepad, TextEdit, VS Code, whatever.
+                                                                Don't use Word. Word adds weird stuff.
+                                                                Just plain text.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="lesson-step">
+                                                        <div class="lesson-step-number">2</div>
+                                                        <div class="lesson-step-content">
+                                                            <h3 class="lesson-step-title">Type The Code</h3>
+                                                            <p>
+                                                                Literally copy the code from above.
+                                                                Don't try to memorize it yet.
+                                                                Copying is learning. Really.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="lesson-step">
+                                                        <div class="lesson-step-number">3</div>
+                                                        <div class="lesson-step-content">
+                                                            <h3 class="lesson-step-title">Save As .html</h3>
+                                                            <p>
+                                                                File → Save As
+                                                                Name: "myfirstwebsite.html"
+                                                                Important: Change "Save as type" to "All Files"
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="lesson-step">
+                                                        <div class="lesson-step-number">4</div>
+                                                        <div class="lesson-step-content">
+                                                            <h3 class="lesson-step-title">Open In Browser</h3>
+                                                            <p>
+                                                                Find the file. Double-click.
+                                                                Your default browser opens it.
+                                                                You made a website. Congrats.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="lesson-step">
+                                                        <div class="lesson-step-number">5</div>
+                                                        <div class="lesson-step-content">
+                                                            <h3 class="lesson-step-title">Celebrate</h3>
+                                                            <p>
+                                                                You just made a website from scratch.
+                                                                It's boring. It's simple.
+                                                                But it's yours. And it works.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <br>
+
+                                                <div class="lesson-box lesson-box-info">
+                                                    <div class="lesson-box-icon">
+                                                        <i class='bx bx-info-circle'></i>
+                                                    </div>
+                                                    <div class="lesson-box-content">
+                                                        <h3 class="lesson-box-title">File Naming Matters</h3>
+                                                        <p>
+                                                            Prefer using lowercase<br>
+                                                            No spaces (use-hyphens-instead)<br>
+                                                            Always include .html extension<br>
+                                                            index.html is the "homepage" filename<br>
+                                                            Simple names are better than clever names
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+
+                                            <div class="lesson-box lesson-box-info">
+                                                <div class="lesson-box-content">
+                                                    <h3 class="lesson-box-title">VS Code Cheat Code</h3>
+                                                    <p>
+                                                        Create a file named <code>index.html</code>.
+                                                        Type <strong>!</strong> and press <strong>Enter</strong>.
+                                                        VS Code generates the boilerplate because typing it manually is
+                                                        pointless.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <br>
+
+                                            <div class="lesson-media">
+                                                <img src="../img_src/!.png" alt="Emmet expansion in VS Code"
+                                                    class="lesson-media-img" />
+                                                <p class="lesson-media-caption text-small">
+                                                    Emmet expanding shorthand into responsibility.
+                                                </p>
+                                            </div>
+                                            <br>
+
+                                            <div class="lesson-code">
+                                                <div class="lesson-code-header">
+                                                    <span class="lesson-code-label">Instant Result</span>
+                                                </div>
+                                                <pre class="lesson-code-block"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -180,111 +436,121 @@
 &lt;body&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                        </div>
+                                            </div>
+                                            <br>
 
-                        <div class="lesson-box lesson-box-warning">
-                            <div class="lesson-box-icon">
-                                <i class='bx bx-error-circle'></i>
-                            </div>
-                            <div class="lesson-box-content">
-                                <h3 class="lesson-box-title">Skill Issue Alert</h3>
-                                <p>
-                                    If nothing happened, Emmet is disabled.
-                                    Or you pressed the wrong key.
-                                    Browsers do not respond to hope.
-                                </p>
-                            </div>
-                        </div>
+                                            <div class="lesson-box lesson-box-warning">
+                                                <div class="lesson-box-icon">
+                                                    <i class='bx bx-error-circle'></i>
+                                                </div>
+                                                <div class="lesson-box-content">
+                                                    <h3 class="lesson-box-title">Skill Issue Alert</h3>
+                                                    <p>
+                                                        If nothing happened, Emmet is disabled.
+                                                        Or you pressed the wrong key.
+                                                        Browsers do not respond to hope.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <br>
 
-                        <!-- VISUAL STRUCTURE -->
-                        <p class="text-base font-normal">
-                            Below is what the browser actually sees: a nested structure.
-                            Not magic. Just boxes inside boxes.
-                        </p>
+                                            <p class="text-base font-normal">
+                                                Below is what the browser actually sees: a nested structure.
+                                                Not magic. Just boxes inside boxes.
+                                            </p>
+                                            <br>
 
-                        <div class="ws-grey" style="width:99%;border:1px solid grey;padding:3px;margin:0;">
-                            &lt;html&gt;
-                            <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">
-                                &lt;head&gt;
-                                <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">
-                                    &lt;title&gt;Page title&lt;/title&gt;
+                                            <div class="ws-grey"
+                                                style="width:99%;border:1px solid grey;padding:3px;margin:0;">
+                                                &lt;html&gt;
+                                                <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">
+                                                    &lt;head&gt;
+                                                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">
+                                                        &lt;title&gt;Page title&lt;/title&gt;
+                                                    </div>
+                                                    &lt;/head&gt;
+                                                </div>
+                                                <div class="ws-grey"
+                                                    style="width:90%;border:1px solid grey;padding:3px;margin:20px;">
+                                                    &lt;body&gt;
+                                                    <div class="w3-white"
+                                                        style="width:90%;border:1px solid grey;padding:3px;margin:20px;">
+                                                        <div
+                                                            style="width:90%;border:1px solid grey;padding:5px;margin:20px">
+                                                            &lt;h1&gt;This is a heading&lt;/h1&gt;
+                                                        </div>
+                                                        <div
+                                                            style="width:90%;border:1px solid grey;padding:5px;margin:20px">
+                                                            &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                                                        </div>
+                                                        <div
+                                                            style="width:90%;border:1px solid grey;padding:5px;margin:20px">
+                                                            &lt;p&gt;This is another paragraph.&lt;/p&gt;
+                                                        </div>
+                                                    </div>
+                                                    &lt;/body&gt;
+                                                </div>
+                                                &lt;/html&gt;
+                                            </div>
+                                            <br>
+
+                                            <div class="lesson-quote">
+                                                <div class="lesson-quote-icon">
+                                                    <i class='bx bxs-quote-alt-left'></i>
+                                                </div>
+                                                <blockquote class="lesson-quote-text">
+                                                    "The best way to learn HTML is to break it, then fix it.
+                                                    Then break it again. Then maybe cry a little.
+                                                    Then fix it again."
+                                                </blockquote>
+                                                <p class="lesson-quote-author">— Every web developer, probably</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                &lt;/head&gt;
-                            </div>
-                            <div class="ws-grey" style="width:90%;border:1px solid grey;padding:3px;margin:20px;">
-                                &lt;body&gt;
-                                <div class="w3-white" style="width:90%;border:1px solid grey;padding:3px;margin:20px;">
-                                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">
-                                        &lt;h1&gt;This is a heading&lt;/h1&gt;
-                                    </div>
-                                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">
-                                        &lt;p&gt;This is a paragraph.&lt;/p&gt;
-                                    </div>
-                                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">
-                                        &lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+                                <div class="lesson-summary">
+                                    <h2 class="lesson-summary-title title-medium">What You Actually Learned</h2>
+                                    <div class="lesson-summary-content">
+                                        <ul class="lesson-summary-list">
+                                            <li>HTML = Structure (CSS = Style, JS = Behavior)</li>
+                                            <li>Everything goes between &lt;html&gt; tags</li>
+                                            <li>Visible content goes in &lt;body&gt;</li>
+                                            <li>Always start with &lt;!DOCTYPE html&gt;</li>
+                                            <li>Save files as .html, not .txt</li>
+                                            <li>You can make a website with just 10 lines of HTML</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                &lt;/body&gt;
                             </div>
-                            &lt;/html&gt;
-                        </div>
+                        </section>
 
-                        <div class="lesson-divider"></div>
+                        <!-- Navigation -->
+                        <section class="section" style="padding-block: 2rem 4rem;">
+                            <div class="container">
+                                <nav class="lesson-navigation">
+                                    <a href="#" class="lesson-nav-btn lesson-nav-prev">
+                                        <span class="lesson-nav-label">
+                                            <i class='bx bx-chevron-left'></i>
+                                            Previous
+                                        </span>
+                                        <span class="lesson-nav-title">Nothing yet</span>
+                                    </a>
 
-                        <div class="lesson-summary">
-                            <h2 class="lesson-summary-title title-medium">
-                                What You Learned (Whether You Tried or Not)
-                            </h2>
-                            <div class="lesson-summary-content">
-                                <ul class="lesson-summary-list">
-                                    <li>HTML labels content. That is its entire job.</li>
-                                    <li>Tags usually come in pairs.</li>
-                                    <li>The basic structure is mandatory.</li>
-                                    <li>Emmet exists to save time, not judge you.</li>
-                                </ul>
+                                    <a href="html_tags_basic.html" class="lesson-nav-btn lesson-nav-next">
+                                        <span class="lesson-nav-label">
+                                            Next Lesson
+                                            <i class='bx bx-chevron-right'></i>
+                                        </span>
+                                        <span class="lesson-nav-title">HTML Tag Basics<br>The 8 Essential Tags</span>
+                                    </a>
+                                </nav>
                             </div>
-                        </div>
-
+                        </section>
                     </div>
-                </div>
-
-
-                <!-- Quote -->
-                <div class="lesson-quote">
-                    <div class="lesson-quote-icon">
-                        <i class='bx bxs-quote-alt-left'></i>
-                    </div>
-                    <blockquote class="lesson-quote-text">
-                        “The browser never breaks your code. It just follows bad instructions perfectly.”
-                    </blockquote>
-                    <p class="lesson-quote-author">— Reality</p>
-                </div>
+                </section>
             </div>
         </section>
-
-        <!-- Navigation -->
-        <section class="section" style="padding-block: 2rem 4rem;">
-            <div class="container">
-                <nav class="lesson-navigation">
-                    <a href="#" class="lesson-nav-btn lesson-nav-prev">
-                        <span class="lesson-nav-label">
-                            <i class='bx bx-chevron-left'></i>
-                            Previous
-                        </span>
-                        <span class="lesson-nav-title">Nothing yet</span>
-                    </a>
-
-                    <a href="#" class="lesson-nav-btn lesson-nav-next">
-                        <span class="lesson-nav-label">
-                            Next
-                            <i class='bx bx-chevron-right'></i>
-                        </span>
-                        <span class="lesson-nav-title">Coming Soon</span>
-                    </a>
-                </nav>
-            </div>
-        </section>
-
     </main>
 
     <script src="../script_src/index.js"></script>
