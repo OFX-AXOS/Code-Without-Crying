@@ -49,213 +49,148 @@
         </nav>
     </header>
 
+    <section class="section" style="padding-block: 5rem 0;">
+        <div class="container">
+            <nav class="lesson-breadcrumb">
+                <a href="../index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="../html_src/lessons.html" class="breadcrumb-link">Lessons</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">HTML Basics</span>
+            </nav>
+        </div>
+    </section>
+
     <main class="main">
-        <section class="section" style="padding-block: 5rem 0;">
+        <section class="section" style="padding-block: 4rem;">
             <div class="container">
-                <nav class="lesson-breadcrumb">
-                    <a href="../index.html" class="breadcrumb-link">Home</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <a href="../html_src/lessons.html" class="breadcrumb-link">Lessons</a>
-                    <span class="breadcrumb-separator">/</span>
-                    <span class="breadcrumb-current">HTML Basics</span>
-                </nav>
+                <h1 class="title-large">HTML Tags: What Your Browser Actually Sees</h1>
+                <p class="text-medium font-normal">This is the part everyone skips. Like reading the manual. Then they open DevTools, stare at broken layouts, and whisper "CSS why u do this" while HTML quietly judges them. This lesson fixes that.</p>
             </div>
+        </section>
 
-            <section class="section" style="padding-block: 0 4rem;">
-                <div class="container lesson-content-wrapper">
+        <section class="section" style="padding-block: 0 4rem;">
+            <div class="container lesson-content-wrapper">
+                <!-- PART 1 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 1</span>
+                        <h2 class="lesson-part-title title-small">The 8 Tags That Don't Suck</h2>
+                    </div>
 
-                    <section class="section" style="padding-block: 2rem;">
-                        <div class="container lesson-header-wrapper">
-
-                            <h1 class="title-large">
-                                HTML Tags: What Your Browser Actually Sees
-                            </h1>
-
-                            <p class="lesson-description text-medium font-normal">
-                                This is the part everyone skips. Like reading the manual.
-                                <br><br>
-                                Then they open DevTools, stare at broken layouts,
-                                and whisper "CSS why u do this" while HTML quietly judges them.
-                                <br><br>
-                                This lesson fixes that.
-                                Short. Funny. Might make you laugh while learning.
-                                No tissues needed.
-                            </p>
-
-                            <div class="lesson-meta">
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            These tags are enough to build a real webpage. Not a startup. Not an app. Just something that opens in a browser and doesn't cry for help.
+                            <br><br>
+                            Open the demo page. Notice how boring it is. Notice how it still works.
+                            <br><br>
+                            <a href="../examples_html/html_tags_1.html" target="_blank">
                                 <span class="lesson-meta-item">
-                                    <i class='bx bx-time-five'></i>
-                                    <span>5 min read (7 if you get distracted by shiny things)</span>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                    <span><strong>SEE BORING MAGIC</strong></span>
                                 </span>
-                                <span class="lesson-meta-item">
-                                    <i class='bx bx-layer'></i>
-                                    <span>Beginner (your mom could read this, probably)</span>
-                                </span>
-                                <span class="lesson-meta-item">
-                                    <i class='bx bx-purchase-tag'></i>
-                                    <span>HTML (the unskippable boring part)</span>
-                                </span>
+                            </a>
+                        </p>
+
+                        <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-folder'></i>
+                                </div>
+                                <h3 class="lesson-card-title">&lt;html&gt;</h3>
+                                <p class="lesson-card-text">
+                                    The container for everything. Without it, browsers guess. Browsers guess like toddlers. Do you trust toddlers with your website?
+                                </p>
                             </div>
 
-                            <div class="lesson-divider"></div>
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-brain'></i>
+                                </div>
+                                <h3 class="lesson-card-title">&lt;head&gt;</h3>
+                                <p class="lesson-card-text">
+                                    Invisible but important. Holds secrets (metadata), titles, links. No, users won't see it. Yes, it still matters.
+                                </p>
+                            </div>
 
-                            <!-- PART 1 -->
-                            <section class="section" style="padding-block: 0 4rem;">
-                                <div class="container lesson-content-wrapper">
-                                    <!-- ALL lesson components go here -->
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-tab'></i>
+                                </div>
+                                <h3 class="lesson-card-title">&lt;title&gt;</h3>
+                                <p class="lesson-card-text">
+                                    The text in the browser tab. Leaving this blank makes your site look like a digital ghost. Ghosts don't get clicks.
+                                </p>
+                            </div>
 
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-body'></i>
+                                </div>
+                                <h3 class="lesson-card-title">&lt;body&gt;</h3>
+                                <p class="lesson-card-text">
+                                    Everything visible goes here. If users can see it, it belongs in the body. This is not rocket science.
+                                </p>
+                            </div>
 
-                                    <div class="lesson-part">
-                                        <div class="lesson-part-header">
-                                            <span class="lesson-part-number">Part 1</span>
-                                            <h2 class="lesson-part-title title-small">
-                                                The 8 Tags That Don't Suck
-                                            </h2>
-                                        </div>
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-heading'></i>
+                                </div>
+                                <h3 class="lesson-card-title">&lt;h1&gt; to &lt;h6&gt;</h3>
+                                <p class="lesson-card-text">
+                                    Headings give structure. Use them in order like normal people. Using &lt;h6&gt; for tiny text is like wearing socks with sandals. Don't.
+                                </p>
+                            </div>
 
-                                        <div class="lesson-part-content">
-                                            <p class="text-base font-normal">
-                                                These tags are enough to build a real webpage.
-                                                <br><br>
-                                                Not a startup. Not an app.
-                                                Just something that opens in a browser and doesn't cry for help.
-                                                <br><br>
-                                                Open the demo page.
-                                                Notice how boring it is.
-                                                Notice how it still works.
-                                                <br><br>
-                                                <a href="../examples_html/html_tags_1.html" target="_blank">
-                                                    <span class="lesson-meta-item">
-                                                        <i class='bx bx-right-arrow-alt'></i>
-                                                        <span><strong>SEE BORING MAGIC</strong></span>
-                                                    </span>
-                                                </a>
-                                            </p>
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-text'></i>
+                                </div>
+                                <h3 class="lesson-card-title">&lt;p&gt;</h3>
+                                <p class="lesson-card-text">
+                                    Paragraphs hold text. Actual sentences. Words humans can read without squinting.
+                                </p>
+                            </div>
 
-                                            <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-down-arrow-alt'></i>
+                                </div>
+                                <h3 class="lesson-card-title">&lt;br&gt;</h3>
+                                <p class="lesson-card-text">
+                                    Line break. Use when you must. Using 20 in a row is a cry for help. We see you.
+                                </p>
+                            </div>
 
-                                                <div class="lesson-card">
-                                                    <div class="lesson-card-header">
-                                                        <i class='bx bx-folder'></i>
-                                                    </div>
-                                                    <h3 class="lesson-card-title">&lt;html&gt;</h3>
-                                                    <p class="lesson-card-text">
-                                                        The container for everything.
-                                                        Without it, browsers guess. Browsers guess like toddlers.
-                                                        Do you trust toddlers with your website?
-                                                    </p>
-                                                </div>
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-minus'></i>
+                                </div>
+                                <h3 class="lesson-card-title">&lt;hr&gt;</h3>
+                                <p class="lesson-card-text">
+                                    A horizontal divider. Old. Simple. Still works. Like your dad's favorite hammer.
+                                </p>
+                            </div>
+                        </div>
 
-                                                <div class="lesson-card">
-                                                    <div class="lesson-card-header">
-                                                        <i class='bx bx-brain'></i>
-                                                    </div>
-                                                    <h3 class="lesson-card-title">&lt;head&gt;</h3>
-                                                    <p class="lesson-card-text">
-                                                        Invisible but important.
-                                                        Holds secrets (metadata), titles, links.
-                                                        No, users won't see it.
-                                                        Yes, it still matters.
-                                                    </p>
-                                                </div>
+                        <div class="lesson-highlight">
+                            <div class="lesson-highlight-icon">
+                                <i class='bx bx-bulb'></i>
+                            </div>
+                            <div class="lesson-highlight-content">
+                                <h3 class="lesson-highlight-title">Reality Check</h3>
+                                <p>
+                                    The demo page uses only these tags. No CSS. No JavaScript. And yet, it is a valid website. That's the baseline.
+                                </p>
+                            </div>
+                        </div>
 
-                                                <div class="lesson-card">
-                                                    <div class="lesson-card-header">
-                                                        <i class='bx bx-tab'></i>
-                                                    </div>
-                                                    <h3 class="lesson-card-title">&lt;title&gt;</h3>
-                                                    <p class="lesson-card-text">
-                                                        The text in the browser tab.
-                                                        Leaving this blank makes your site look like a digital ghost.
-                                                        Ghosts don't get clicks.
-                                                    </p>
-                                                </div>
-
-                                                <div class="lesson-card">
-                                                    <div class="lesson-card-header">
-                                                        <i class='bx bx-body'></i>
-                                                    </div>
-                                                    <h3 class="lesson-card-title">&lt;body&gt;</h3>
-                                                    <p class="lesson-card-text">
-                                                        Everything visible goes here.
-                                                        If users can see it, it belongs in the body.
-                                                        This is not rocket science.
-                                                    </p>
-                                                </div>
-
-                                                <div class="lesson-card">
-                                                    <div class="lesson-card-header">
-                                                        <i class='bx bx-heading'></i>
-                                                    </div>
-                                                    <h3 class="lesson-card-title">&lt;h1&gt; to &lt;h6&gt;</h3>
-                                                    <p class="lesson-card-text">
-                                                        Headings give structure.
-                                                        Use them in order like normal people.
-                                                        Using &lt;h6&gt; for tiny text is like wearing socks with
-                                                        sandals.
-                                                        Don't.
-                                                    </p>
-                                                </div>
-
-                                                <div class="lesson-card">
-                                                    <div class="lesson-card-header">
-                                                        <i class='bx bx-text'></i>
-                                                    </div>
-                                                    <h3 class="lesson-card-title">&lt;p&gt;</h3>
-                                                    <p class="lesson-card-text">
-                                                        Paragraphs hold text.
-                                                        Actual sentences.
-                                                        Words humans can read without squinting.
-                                                    </p>
-                                                </div>
-
-                                                <div class="lesson-card">
-                                                    <div class="lesson-card-header">
-                                                        <i class='bx bx-down-arrow-alt'></i>
-                                                    </div>
-                                                    <h3 class="lesson-card-title">&lt;br&gt;</h3>
-                                                    <p class="lesson-card-text">
-                                                        Line break.
-                                                        Use when you must.
-                                                        Using 20 in a row is a cry for help.
-                                                        We see you.
-                                                    </p>
-                                                </div>
-
-                                                <div class="lesson-card">
-                                                    <div class="lesson-card-header">
-                                                        <i class='bx bx-minus'></i>
-                                                    </div>
-                                                    <h3 class="lesson-card-title">&lt;hr&gt;</h3>
-                                                    <p class="lesson-card-text">
-                                                        A horizontal divider.
-                                                        Old. Simple. Still works.
-                                                        Like your dad's favorite hammer.
-                                                    </p>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="lesson-highlight">
-                                                <div class="lesson-highlight-icon">
-                                                    <i class='bx bx-bulb'></i>
-                                                </div>
-                                                <div class="lesson-highlight-content">
-                                                    <h3 class="lesson-highlight-title">Reality Check</h3>
-                                                    <p>
-                                                        The demo page uses only these tags.
-                                                        No CSS. No JavaScript.
-                                                        And yet, it is a valid website.
-                                                        That's the baseline.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="lesson-code">
-                                                <div class="lesson-code-header">
-                                                    <span class="lesson-code-label">HTML</span>
-                                                </div>
-                                                <pre class="lesson-code-block"><code>&lt;!DOCTYPE html&gt;
+                        <div class="lesson-code">
+                            <div class="lesson-code-header">
+                                <span class="lesson-code-label">HTML</span>
+                            </div>
+                            <pre class="lesson-code-block"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;title&gt;My First Website (Be Nice)&lt;/title&gt;
@@ -280,282 +215,222 @@
     &lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                                            </div>
-
-                                            <div class="lesson-box lesson-box-info">
-                                                <div class="lesson-box-icon">
-                                                    <i class='bx bx-info-circle'></i>
-                                                </div>
-                                                <div class="lesson-box-content">
-                                                    <h3 class="lesson-box-title">Small Announcement</h3>
-                                                    <p>
-                                                        Some tags are explained briefly.
-                                                        Some are left for you to Google.
-                                                        <br>
-                                                        Googling is not cheating.
-                                                        It is literally the job.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="lesson-divider"></div>
-                                    </div>
-
-                                </div>
-                            </section>
-
-                            <!-- PART 2 -->
-                            <section class="section" style="padding-block: 0 4rem;">
-                                <div class="container lesson-content-wrapper">
-                                    <div class="lesson-part">
-                                        <div class="lesson-part-header">
-                                            <span class="lesson-part-number">Part 2</span>
-                                            <h2 class="lesson-part-title title-small">
-                                                What Even Is an HTML Element?
-                                            </h2>
-                                        </div>
-
-                                        <div class="lesson-part-content">
-                                            <p class="text-base font-normal">
-                                                Before adding more tags,
-                                                you need to understand what an element actually is.
-                                                <br>
-                                                An element is made of:
-                                                a tag,
-                                                its content,
-                                                and sometimes attributes.
-                                                <br>
-                                                We keep it simple here.
-                                                Complex explanations can wait.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="lesson-box lesson-box-info">
-                                        <div class="lesson-box-icon">
-                                            <i class='bx bx-brain'></i>
-                                        </div>
-                                        <div class="lesson-box-content">
-                                            <h3 class="lesson-box-title">HTML Elements (For Tired Brains)</h3>
-
-                                            <p>
-                                                If the definition above made your brain say "nope",
-                                                remember this instead:
-                                                <br>
-                                                <strong>
-                                                    An HTML element is everything from the opening tag
-                                                    to the closing tag.
-                                                </strong>
-                                                <br>
-                                                Yes, including the angle brackets.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <br>
-
-                                    <div class="lesson-highlight">
-                                        <div class="lesson-highlight-icon">
-                                            <i class='bx bx-body'></i>
-                                        </div>
-                                        <div class="lesson-highlight-content">
-                                            <h3 class="lesson-highlight-title">Example: A Full HTML Element</h3>
-                                            <p>
-                                                This is a real HTML element with all the parts included:
-                                                <br>
-                                                <code>
-                        &lt;p id="intro" class="text-primary" title="A paragraph"&gt;
-                        Hello, human. I have attributes.
-                        &lt;/p&gt;
-                    </code>
-                                                <br><br>
-                                                Opening tag → attributes → content → closing tag.
-                                                <br>
-                                                That whole thing together is one HTML element.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <br>
-
-                                    <div class="lesson-box lesson-box-warning">
-                                        <div class="lesson-box-icon">
-                                            <i class='bx bx-error'></i>
-                                        </div>
-                                        <div class="lesson-box-content">
-                                            <h3 class="lesson-box-title">Tags Drama</h3>
-                                            <p>
-                                                Never skip closing tags.
-                                                <br>
-                                                Some browsers tolerate it.
-                                                Some don't.
-                                                <br>
-                                                Unexpected layout chaos is not a feature.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <br>
-
-                                    <div class="lesson-part">
-                                        <div class="lesson-part-header">
-                                            <h2 class="lesson-part-title title-small">Empty HTML Elements</h2>
-                                        </div>
-
-                                        <div class="lesson-part-content">
-                                            <p class="text-base font-normal">
-                                                Most HTML elements come in pairs.
-                                                <br>
-                                                Some do not.
-                                                <br>
-                                                These are called empty elements.
-                                                They're like introverts at a party - they show up, do their thing, and
-                                                leave.
-                                            </p>
-
-                                            <div class="lesson-steps">
-                                                <div class="lesson-card-grid">
-
-                                                    <div class="lesson-step">
-                                                        <div class="lesson-step-number">1</div>
-                                                        <div class="lesson-step-content">
-                                                            <h3 class="lesson-step-title">&lt;br&gt;</h3>
-                                                            <p>
-                                                                Inserts a line break.
-                                                                No closing tag.
-                                                                Use sparingly or your layout will cry.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="lesson-step">
-                                                        <div class="lesson-step-number">2</div>
-                                                        <div class="lesson-step-content">
-                                                            <h3 class="lesson-step-title">&lt;hr&gt;</h3>
-                                                            <p>
-                                                                Creates a horizontal divider.
-                                                                Old-school.
-                                                                Still effective.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="lesson-step">
-                                                        <div class="lesson-step-number">3</div>
-                                                        <div class="lesson-step-content">
-                                                            <h3 class="lesson-step-title">&lt;img&gt;</h3>
-                                                            <p>
-                                                                Displays an image.
-                                                                Requires attributes (like where the picture is).
-                                                                Still has no closing tag.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="lesson-step">
-                                                        <div class="lesson-step-number">4</div>
-                                                        <div class="lesson-step-content">
-                                                            <h3 class="lesson-step-title">&lt;input&gt;</h3>
-                                                            <p>
-                                                                Used in forms.
-                                                                Self-contained.
-                                                                Ends itself like a responsible adult.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="lesson-step">
-                                                        <div class="lesson-step-number">5</div>
-                                                        <div class="lesson-step-content">
-                                                            <h3 class="lesson-step-title">&lt;meta&gt;</h3>
-                                                            <p>
-                                                                Lives in the head.
-                                                                Browsers care.
-                                                                Users never see it.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="lesson-box lesson-box-info">
-                                                    <div class="lesson-box-icon">
-                                                        <i class='bx bx-info-circle'></i>
-                                                    </div>
-                                                    <div class="lesson-box-content">
-                                                        <h3 class="lesson-box-title">HTML Logic</h3>
-                                                        <p>
-                                                            HTML is not case-sensitive.
-                                                            <br>
-                                                            &lt;P&gt; and &lt;p&gt; both work.
-                                                            <br>
-                                                            Still, pick one and be consistent.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="lesson-quote">
-                                                <div class="lesson-quote-icon">
-                                                    <i class='bx bxs-quote-alt-left'></i>
-                                                </div>
-                                                <blockquote class="lesson-quote-text">
-                                                    "If you understand HTML structure,
-                                                    everything else becomes easier to debug."
-                                                </blockquote>
-                                                <p class="lesson-quote-author">— Every tired developer at 3 AM</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="lesson-summary">
-                                    <h2 class="lesson-summary-title title-medium">What You Learned</h2>
-                                    <div class="lesson-summary-content">
-                                        <ul class="lesson-summary-list">
-                                            <li>An HTML element includes tags, content, and attributes</li>
-                                            <li>Closing tags matter more than your optimism</li>
-                                            <li>Some elements are intentionally empty</li>
-                                            <li>HTML is forgiving, but not magical</li>
-                                        </ul>
-                                    </div>
-                                </div>
                         </div>
-                    </section>
 
-                    <!-- Navigation -->
-                    <section class="section" style="padding-block: 2rem 4rem;">
-                        <div class="container">
-                            <nav class="lesson-navigation">
-                                <a href="html_intro.html" class="lesson-nav-btn lesson-nav-prev">
-                                    <span class="lesson-nav-label">
-                                        <i class='bx bx-chevron-left'></i>
-                                        HTML Intro
-                                    </span>
-                                    <span class="lesson-nav-title">HTML Introduction<br>In Case You Forgot</span>
-                                </a>
-
-                                <a href="../lessons_src/links_images.html" class="lesson-nav-btn lesson-nav-next">
-                                    <span class="lesson-nav-label">
-                                        Next
-                                        <i class='bx bx-chevron-right'></i>
-                                    </span>
-                                    <span class="lesson-nav-title">Links & Images: Clickable Things That Work</span>
-                                </a>
-                            </nav>
+                        <div class="lesson-box lesson-box-info">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-info-circle'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Small Announcement</h3>
+                                <p>
+                                    Some tags are explained briefly. Some are left for you to Google.
+                                    <br>
+                                    Googling is not cheating. It is literally the job.
+                                </p>
+                            </div>
                         </div>
-                    </section>
-            </section>
+                    </div>
+                </div>
 
-        </section>
-        </div>
+                <!-- PART 2 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 2</span>
+                        <h2 class="lesson-part-title title-small">What Even Is an HTML Element?</h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            Before adding more tags, you need to understand what an element actually is.
+                            <br>
+                            An element is made of: a tag, its content, and sometimes attributes.
+                            <br>
+                            We keep it simple here. Complex explanations can wait.
+                        </p>
+
+                        <div class="lesson-box lesson-box-info">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-brain'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">HTML Elements (For Tired Brains)</h3>
+                                <p>
+                                    If the definition above made your brain say "nope", remember this instead:
+                                    <br>
+                                    <strong>
+                                        An HTML element is everything from the opening tag to the closing tag.
+                                    </strong>
+                                    <br>
+                                    Yes, including the angle brackets.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-highlight">
+                            <div class="lesson-highlight-icon">
+                                <i class='bx bx-body'></i>
+                            </div>
+                            <div class="lesson-highlight-content">
+                                <h3 class="lesson-highlight-title">Example: A Full HTML Element</h3>
+                                <p>
+                                    This is a real HTML element with all the parts included:
+                                    <br>
+                                    <code>
+                                        &lt;p id="intro" class="text-primary" title="A paragraph"&gt;
+                                        Hello, human. I have attributes.
+                                        &lt;/p&gt;
+                                    </code>
+                                    <br><br>
+                                    Opening tag → attributes → content → closing tag.
+                                    <br>
+                                    That whole thing together is one HTML element.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-box lesson-box-warning">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-error'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Tags Drama</h3>
+                                <p>
+                                    Never skip closing tags.
+                                    <br>
+                                    Some browsers tolerate it. Some don't.
+                                    <br>
+                                    Unexpected layout chaos is not a feature.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-part-header">
+                            <h2 class="lesson-part-title title-small">Empty HTML Elements</h2>
+                        </div>
+
+                        <div class="lesson-part-content">
+                            <p class="text-base font-normal">
+                                Most HTML elements come in pairs. Some do not. These are called empty elements. They're like introverts at a party - they show up, do their thing, and leave.
+                            </p>
+
+                            <div class="lesson-steps">
+                                <div class="lesson-step">
+                                    <div class="lesson-step-number">1</div>
+                                    <div class="lesson-step-content">
+                                        <h3 class="lesson-step-title">&lt;br&gt;</h3>
+                                        <p>
+                                            Inserts a line break. No closing tag. Use sparingly or your layout will cry.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                    <div class="lesson-step-number">2</div>
+                                    <div class="lesson-step-content">
+                                        <h3 class="lesson-step-title">&lt;hr&gt;</h3>
+                                        <p>
+                                            Creates a horizontal divider. Old-school. Still effective.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                    <div class="lesson-step-number">3</div>
+                                    <div class="lesson-step-content">
+                                        <h3 class="lesson-step-title">&lt;img&gt;</h3>
+                                        <p>
+                                            Displays an image. Requires attributes (like where the picture is). Still has no closing tag.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                    <div class="lesson-step-number">4</div>
+                                    <div class="lesson-step-content">
+                                        <h3 class="lesson-step-title">&lt;input&gt;</h3>
+                                        <p>
+                                            Used in forms. Self-contained. Ends itself like a responsible adult.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                    <div class="lesson-step-number">5</div>
+                                    <div class="lesson-step-content">
+                                        <h3 class="lesson-step-title">&lt;meta&gt;</h3>
+                                        <p>
+                                            Lives in the head. Browsers care. Users never see it.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-box lesson-box-info">
+                                <div class="lesson-box-icon">
+                                    <i class='bx bx-info-circle'></i>
+                                </div>
+                                <div class="lesson-box-content">
+                                    <h3 class="lesson-box-title">HTML Logic</h3>
+                                    <p>
+                                        HTML is not case-sensitive.
+                                        <br>
+                                        &lt;P&gt; and &lt;p&gt; both work.
+                                        <br>
+                                        Still, pick one and be consistent.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lesson-quote">
+                                <div class="lesson-quote-icon">
+                                    <i class='bx bxs-quote-alt-left'></i>
+                                </div>
+                                <blockquote class="lesson-quote-text">
+                                    "If you understand HTML structure, everything else becomes easier to debug."
+                                </blockquote>
+                                <p class="lesson-quote-author">— Every tired developer at 3 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-summary">
+                    <h2 class="lesson-summary-title title-medium">What You Learned</h2>
+                    <div class="lesson-summary-content">
+                        <ul class="lesson-summary-list">
+                            <li>An HTML element includes tags, content, and attributes</li>
+                            <li>Closing tags matter more than your optimism</li>
+                            <li>Some elements are intentionally empty</li>
+                            <li>HTML is forgiving, but not magical</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <section class="section" style="padding-block: 2rem 4rem;">
+                    <div class="container">
+                        <nav class="lesson-navigation">
+                            <a href="html_intro.html" class="lesson-nav-btn lesson-nav-prev">
+                                <span class="lesson-nav-label">
+                                    <i class='bx bx-chevron-left'></i>
+                                    HTML Intro
+                                </span>
+                                <span class="lesson-nav-title">HTML Introduction<br>In Case You Forgot</span>
+                            </a>
+
+                            <a href="../lessons_src/links_images.html" class="lesson-nav-btn lesson-nav-next">
+                                <span class="lesson-nav-label">
+                                    Next
+                                    <i class='bx bx-chevron-right'></i>
+                                </span>
+                                <span class="lesson-nav-title">Links & Images: <br> Clickable Things That Work</span>
+                            </a>
+                        </nav>
+                    </div>
+                </section>
+            </div>
         </section>
     </main>
 
-
     <script src="../script_src/index.js"></script>
 </body>
-
 </html>
