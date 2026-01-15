@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Attributes: Your Tags' Secret Superpowers</title>
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css_src/index.css" />
+
+    <!-- Lesson CSS -->
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="../index.html" class="brand">
+                <svg width="64" height="32" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="24" font-family="monospace" font-size="24" font-weight="700" fill="currentColor">
+                        !< </text>
+                </svg>
+            </a>
+
+            <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+
+            <div class="menu" id="menu">
+                <ul class="menu-inner">
+                    <li class="menu-item"><a href="../index.html" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="../html_src/lessons.html" class="menu-link">Lessons</a></li>
+                    <li class="menu-item"><a href="../html_src/how_it_works.html" class="menu-link">How It Works</a>
+                    </li>
+                </ul>
+            </div>
+
+            <span class="overlay"></span>
+
+            <button type="button" class="menu-block">
+                <a href="../html_src/lessons.html" class="btn btn-neutral">All Lessons</a>
+            </button>
+        </nav>
+    </header>
+    
+    <section class="section" style="padding-block: 5rem 0;">
+        <div class="container">
+            <nav class="lesson-breadcrumb">
+                <a href="../index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="../html_src/lessons.html" class="breadcrumb-link">Lessons</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">HTML Attributes</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="main">
+        <section class="section" style="padding-block: 4rem;">
+            <div class="container">
+                <h1 class="title-large">HTML Attributes: The Settings Menu For Your Tags</h1>
+                <p class="text-medium font-normal">Think of tags as plain white T-shirts. Attributes are what let you choose the size, color, and whether it says "I ❤️ HTML" or "My Code Compiles On The First Try (Liar)".</p>
+            </div>
+        </section>
+        
+        <section class="section" style="padding-block: 0 4rem;">
+            <div class="container lesson-content-wrapper">
+                <!-- PART 1 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 1</span>
+                        <h2 class="lesson-part-title title-small">Attributes: Why Browsers Need Instructions</h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            Imagine telling someone "Make me a sandwich" vs "Make me a turkey sandwich with mayo, no tomatoes, and cut diagonally."<br><br>
+                            Tags are "make me a sandwich." Attributes are the specific instructions. Browsers are hungry. Be specific.
+                        </p>
+
+                        <div class="lesson-steps">
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">1</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Without Attributes = Generic</h3>
+                                    <p><code>&lt;img&gt;</code> says "show an image." Cool. Which image? Where is it? How big? The browser shrugs and shows nothing.</p>
+                                </div>
+                            </div>
+
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">2</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">With Attributes = Specific</h3>
+                                    <p><code>&lt;img src="cat.jpg" alt="A fluffy cat" width="300"&gt;</code> says "show cat.jpg, describe it as fluffy, make it 300px wide." Browser: "Got it, boss."</p>
+                                </div>
+                            </div>
+                            
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">3</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Attributes = Extra Info</h3>
+                                    <p>They go inside the opening tag. Always. They're like secret notes you pass to the browser while the tag is introducing itself.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-cog'></i>
+                                </div>
+                                <h3 class="lesson-card-title">The Configuration</h3>
+                                <p class="lesson-card-text">
+                                    <code>src="..."</code> tells images where to look. <code>href="..."</code> tells links where to go. <code>id="..."</code> gives elements a name tag.
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-accessibility'></i>
+                                </div>
+                                <h3 class="lesson-card-title">The Accessibility</h3>
+                                <p class="lesson-card-text">
+                                    <code>alt="..."</code> describes images for screen readers. <code>title="..."</code> shows tooltips. These make your site human-friendly.
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-paint'></i>
+                                </div>
+                                <h3 class="lesson-card-title">The Styling</h3>
+                                <p class="lesson-card-text">
+                                    <code>class="..."</code> and <code>style="..."</code> control appearance. Yes, CSS is better for this, but sometimes you need quick fixes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-highlight">
+                            <div class="lesson-highlight-icon">
+                                <i class='bx bx-bulb'></i>
+                            </div>
+                            <div class="lesson-highlight-content">
+                                <h3 class="lesson-highlight-title">Attribute Anatomy 101</h3>
+                                <p><strong>name="value"</strong> - That's the formula. Always.<br>
+                                Name: What you're setting (href, src, alt).<br>
+                                Value: What you're setting it to (URL, description, size).<br>
+                                Quotes: Use them. Even when you think you don't need to.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-code">
+                            <div class="lesson-code-header">
+                                <span class="lesson-code-label">HTML - Attributes In Action</span>
+                            </div>
+                            <pre class="lesson-code-block"><code>&lt;!-- Link with multiple attributes --&gt;
+&lt;a href="https://google.com" 
+   target="_blank" 
+   title="Search for answers (or cats)" 
+   class="big-button"&gt;
+    Google It (Opens in new tab)
+&lt;/a&gt;
+
+&lt;!-- Image with essential attributes --&gt;
+&lt;img src="party-cat.gif" 
+     alt="Cat wearing party hat and dancing" 
+     width="400" 
+     height="300" 
+     class="rounded-image"&gt;
+
+&lt;!-- Input with type attribute (changes everything!) --&gt;
+&lt;input type="password" 
+       placeholder="Enter secret password" 
+       required 
+       maxlength="20"&gt;</code></pre>
+                        </div>
+
+                        <div class="lesson-box lesson-box-info">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-info-circle'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Boolean Attributes: The Lazy Ones</h3>
+                                <p>Some attributes don't need values. They're either there or not. Like <code>disabled</code>, <code>required</code>, or <code>readonly</code>. They just exist and say "Yep, I'm doing my thing."</p>
+                                <pre style="margin-top: 1rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 4px;"><code>&lt;input type="checkbox" checked&gt;
+&lt;button disabled&gt;Can't Click Me&lt;/button&gt;
+&lt;video controls autoplay&gt;&lt;/video&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PART 2 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 2</span>
+                        <h2 class="lesson-part-title title-small">Common Attributes & When To Use Them</h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            Now that you're typing faster with Emmet, let's make sure you're using the RIGHT attributes. Not all attributes are created equal.
+                        </p>
+
+                        <div class="lesson-box lesson-box-success">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-check-shield'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">The "Never Skip These" Club</h3>
+                                <p>
+                                    <strong>alt="..."</strong> for images (accessibility + SEO)<br>
+                                    <strong>href="..."</strong> for links (otherwise they go nowhere)<br>
+                                    <strong>src="..."</strong> for images/scripts (otherwise they're invisible)<br>
+                                    <strong>type="..."</strong> for inputs (otherwise they're just text boxes)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-code">
+                            <div class="lesson-code-header">
+                                <span class="lesson-code-label">HTML - Attribute Showcase</span>
+                            </div>
+                            <pre class="lesson-code-block"><code>&lt;!-- The "Good Student" Example --&gt;
+&lt;img src="profile.jpg" 
+     alt="Person smiling in profile photo"
+     width="200"
+     height="200"
+     loading="lazy"
+     class="profile-pic"
+     id="user-avatar"&gt;
+
+&lt;!-- Form with all the attributes --&gt;
+&lt;form action="/submit" method="POST" autocomplete="on"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" 
+           id="email" 
+           name="user_email"
+           placeholder="you@example.com"
+           required
+           autofocus&gt;
+    
+    &lt;button type="submit" 
+            class="btn-primary"
+            aria-label="Submit form"&gt;
+        Send It!
+    &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+
+                        <div class="lesson-box lesson-box-warning">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-error'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Attribute Crimes & Misdemeanors</h3>
+                                <p>
+                                    <strong>Don't:</strong> Use spaces in attribute values without quotes<br>
+                                    <strong>Don't:</strong> Forget closing quotes (breaks everything)<br>
+                                    <strong>Don't:</strong> Use deprecated attributes like <code>border="1"</code> on images<br>
+                                    <strong>Do:</strong> Use lowercase for attribute names (browsers don't care, humans do)<br>
+                                    <strong>Do:</strong> Separate multiple attributes with spaces (not commas!)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-link'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Link Attributes</h3>
+                                <p class="lesson-card-text">
+                                    <code>href</code> = Destination<br>
+                                    <code>target</code> = Where to open (_blank, _self)<br>
+                                    <code>rel</code> = Relationship (nofollow, noopener)<br>
+                                    <code>title</code> = Tooltip text
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-image-alt'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Image Attributes</h3>
+                                <p class="lesson-card-text">
+                                    <code>src</code> = Image location<br>
+                                    <code>alt</code> = Alternative text (required!)<br>
+                                    <code>width/height</code> = Dimensions<br>
+                                    <code>loading</code> = Lazy or eager
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-edit'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Form Attributes</h3>
+                                <p class="lesson-card-text">
+                                    <code>type</code> = Input type (text, email, password)<br>
+                                    <code>name</code> = Data identifier<br>
+                                    <code>placeholder</code> = Example text<br>
+                                    <code>required</code> = Must be filled
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-highlight">
+                            <div class="lesson-highlight-icon">
+                                <i class='bx bx-code-curly'></i>
+                            </div>
+                            <div class="lesson-highlight-content">
+                                <h3 class="lesson-highlight-title">CSS & JavaScript Connection</h3>
+                                <p>Attributes aren't just for browsers. CSS uses them with attribute selectors: <code>a[target="_blank"]</code> JavaScript accesses them: <code>element.getAttribute("id")</code> They're the bridge between HTML and everything else.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-box lesson-box-info">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-experiment'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Try This: The Attribute Detective</h3>
+                                <p>Right-click any element on this page → Inspect. Look at the HTML in DevTools. See all those <code>class="..."</code>, <code>id="..."</code>, <code>style="..."</code>? Those are attributes in the wild. Now you know what they do!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-summary">
+                    <h2 class="lesson-summary-title title-medium">Attribute Takeaways (No Fluff)</h2>
+                    <div class="lesson-summary-content">
+                        <ul class="lesson-summary-list">
+                            <li>Attributes = Extra info inside opening tags: <code>name="value"</code></li>
+                            <li>Emmet shortcuts: <code>.class</code>, <code>#id</code>, <code>a[href="#"]</code></li>
+                            <li>Some are required (src, href, alt), some are optional but helpful</li>
+                            <li>Boolean attributes exist without values: <code>checked</code>, <code>disabled</code></li>
+                            <li>Attributes connect HTML to CSS (styling) and JavaScript (behavior)</li>
+                            <li>Always quote attribute values. Always. Seriously.</li>
+                        </ul>
+                    </div>
+                </div>
+                <br><br>
+
+
+                <!-- PART 3 -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 3</span>
+                        <h2 class="lesson-part-title title-small">Attributes & Emmet: Typing Less, Coding More</h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            Typing attributes by hand is for beginners. Real developers use Emmet. It's like cheat codes for HTML. Here's how to make attributes appear with almost no typing.
+                        </p>
+
+                        <div class="lesson-box lesson-box-success">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-rocket'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Emmet: Your Typing Assistant</h3>
+
+                                <p>Emmet expands abbreviations into full HTML. It works in VS Code, Sublime, and other editors. Type abbreviation → press Tab → magic happens.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-code">
+                            <div class="lesson-code-header">
+                                <span class="lesson-code-label">Emmet Magic with Attributes</span>
+                            </div>
+                            <pre class="lesson-code-block"><code>/* Type this → Get this after pressing Tab */
+
+.hello → &lt;div class="hello"&gt;&lt;/div&gt;
+#main → &lt;div id="main"&gt;&lt;/div&gt;
+p.intro → &lt;p class="intro"&gt;&lt;/p&gt;
+a[href="#"] → &lt;a href="#"&gt;&lt;/a&gt;
+img[src="cat.jpg"] → &lt;img src="cat.jpg" alt=""&gt;
+input[type=text] → &lt;input type="text"&gt;</code></pre>
+                        </div>
+                        
+
+                        <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-code-alt'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Class & ID Shortcuts</h3>
+                                <p class="lesson-card-text">
+                                    <code>.className</code> = <code>class="className"</code><br>
+                                    <code>#idName</code> = <code>id="idName"</code><br>
+                                    <code>div.container</code> = <code>&lt;div class="container"&gt;</code>
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-bracket'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Square Bracket Magic</h3>
+                                <p class="lesson-card-text">
+                                    <code>a[href="#"]</code> = link with href<br>
+                                    <code>img[src alt]</code> = image with src & alt<br>
+                                    <code>input[type=email]</code> = email input
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-plus-medical'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Multiple Attributes</h3>
+                                <p class="lesson-card-text">
+                                    <code>a.btn[href="#"].primary</code><br>
+                                    = <code>&lt;a href="#" class="btn primary"&gt;</code><br>
+                                    Combine classes, IDs, and attributes!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-highlight">
+                            <div class="lesson-highlight-icon">
+                                <i class='bx bx-cool'></i>
+                            </div>
+                            <div class="lesson-highlight-content">
+                                <h3 class="lesson-highlight-title">Pro Emmet Combos</h3>
+                                <p>Want to look like a wizard? Try these:<br>
+                                <code>nav&gt;ul&gt;li*3&gt;a[href="#"]</code> = Navigation with 3 links<br>
+                                <code>form&gt;input[type=text]+input[type=submit]</code> = Form with submit<br>
+                                <code>.card&gt;img[src]+.content&gt;h3+p</code> = Card component
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-box lesson-box-info">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-joystick'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Emmet Game: Try These Now!</h3>
+                                <p>Open VS Code (or your editor).  Create a new HTML file. Type these and press Tab:</p>
+                                <ol style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                    <li><code>.container&gt;.row&gt;.col*3</code></li>
+                                    <li><code>ul.nav&gt;li*4&gt;a[href="#"]{Item $}</code></li>
+                                    <li><code>form#login&gt;(label+input[type=text])*3</code></li>
+                                </ol>
+                                <p style="margin-top: 0.5rem;">Watch the HTML appear. Feel like a magician. You are one now.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-box lesson-box-warning">
+                            <div class="lesson-box-icon">
+                                <i class='bx bx-error'></i>
+                            </div>
+                            <div class="lesson-box-content">
+                                <h3 class="lesson-box-title">Emmet Doesn't Work?</h3>
+                                <p>
+                                    <strong>Check:</strong> File extension is .html<br>
+                                    <strong>Check:</strong> VS Code has Emmet enabled (Settings → "emmet")<br>
+                                    <strong>Check:</strong> You're pressing Tab !<br>
+                                    <strong>If still broken:</strong> Type "!", Tab for basic HTML template first
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-code">
+                            <div class="lesson-code-header">
+                                <span class="lesson-code-label">Real World Example</span>
+                            </div>
+                            <pre class="lesson-code-block"><code>/* What you type (2 seconds) */
+.card&gt;img[src="product.jpg"][alt="Product image"]+.content&gt;h3{Product Name}+p{Description}+button.btn{Buy Now}
+
+/* What you get (full HTML) */
+&lt;div class="card"&gt;
+    &lt;img src="product.jpg" alt="Product image"&gt;
+    &lt;div class="content"&gt;
+        &lt;h3&gt;Product Name&lt;/h3&gt;
+        &lt;p&gt;Description&lt;/p&gt;
+        &lt;button class="btn"&gt;Buy Now&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="lesson-quote">
+                            <div class="lesson-quote-icon">
+                                <i class='bx bxs-quote-alt-left'></i>
+                            </div>
+                            <blockquote class="lesson-quote-text">
+                                "Learning Emmet is like learning to drive stick shift. At first it's awkward, then it becomes second nature, and soon you wonder how anyone drives automatic."
+                            </blockquote>
+                            <p class="lesson-quote-author">— Developer who types at 200 WPM (with Emmet)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <section class="section" style="padding-block: 2rem 4rem;">
+                    <div class="container">
+                        <nav class="lesson-navigation">
+                            <a href="html_tags_basic.html" class="lesson-nav-btn lesson-nav-prev">
+                                <span class="lesson-nav-label">
+                                    <i class='bx bx-chevron-left'></i>
+                                    Previous
+                                </span>
+                                <span class="lesson-nav-title">Link & Images<br>Clickable Things that Works</span>
+                            </a>
+
+                            <a href="#" class="lesson-nav-btn lesson-nav-next">
+                                <span class="lesson-nav-label">
+                                    Next
+                                    <i class='bx bx-chevron-right'></i>
+                                </span>
+                                <span class="lesson-nav-title">Coming Soon</span>
+                            </a>
+                        </nav>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS -->
+    <script src="../script_src/index.js"></script>
+</body>
+</html>
