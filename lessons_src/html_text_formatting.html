@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Formatting</title>
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css_src/index.css" />
+
+    <!-- Lesson CSS (if needed) -->
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="../index.html" class="brand">
+                <svg width="64" height="32" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="24" font-family="monospace" font-size="24" font-weight="700" fill="currentColor">
+                        !< </text>
+                </svg>
+            </a>
+
+            <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+
+            <div class="menu" id="menu">
+                <ul class="menu-inner">
+                    <li class="menu-item"><a href="../index.html" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="../html_src/lessons.html" class="menu-link">Lessons</a></li>
+                    <li class="menu-item"><a href="../html_src/how_it_works.html" class="menu-link">How It Works</a>
+                    </li>
+                </ul>
+            </div>
+
+            <span class="overlay"></span>
+
+            <button type="button" class="menu-block">
+                <a href="../html_src/lessons.html" class="btn btn-neutral">All Lessons</a>
+            </button>
+        </nav>
+    </header>
+    <section class="section" style="padding-block: 5rem 0;">
+        <div class="container">
+            <nav class="lesson-breadcrumb">
+                <a href="../index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="../html_src/lessons.html" class="breadcrumb-link">Lessons</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">HTML Text Formatting</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="main">
+        <!-- Your content goes here -->
+        <section class="section" style="padding-block: 2rem;">
+            <div class="container lesson-header-wrapper">
+                <h1 class="title-large">HTML Text Formatting</h1>
+
+                <p class="lesson-description text-medium font-normal">
+                    HTML contains several elements for defining text with a special meaning. Like how
+                    <strong>bold</strong> makes text important, or how <i>italics</i> makes you sound sophisticated at
+                    coffee shops.
+                </p>
+
+                <div class="lesson-meta">
+                    <span class="lesson-meta-item">
+                        <i class='bx bx-time-five'></i>
+                        <span>8 min read</span>
+                    </span>
+                    <span class="lesson-meta-item">
+                        <i class='bx bx-layer'></i>
+                        <span>Beginner</span>
+                    </span>
+                    <span class="lesson-meta-item">
+                        <i class='bx bx-purchase-tag'></i>
+                        <span>HTML</span>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-block: 0 4rem;">
+            <div class="container lesson-content-wrapper">
+                <!-- ALL lesson components go here -->
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 1</span>
+                        <h2 class="lesson-part-title title-small">HTML Formatting Elements: Making Text Fancy Since 1993
+                        </h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            Formatting elements were designed to display special types of text. These can be used
+                            according to your need—they can make your webpage either look <mark>professional</mark> or
+                            like my <del>first</del> <ins>second</ins> attempt at cooking (which was still terrible).
+                        </p>
+
+                        <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-code-alt'></i>
+                                </div>
+                                <h3 class="lesson-card-title"><code>&lt;strong&gt;</code> - Important Text</h3>
+                                <p class="lesson-card-text">
+                                    <strong>This text is so important</strong> it should be read in a dramatic movie
+                                    trailer voice. Use it for things like "WARNING: Coffee is hot" or "PLEASE feed the
+                                    developer."
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-list-ul'></i>
+                                </div>
+                                <h3 class="lesson-card-title"><code>&lt;i&gt;</code> - Italicized Wisdom</h3>
+                                <p class="lesson-card-text">
+                                    <i>Use italics when you want to sound thoughtful</i>, like you're sharing ancient
+                                    web development secrets. Also great for pretend Latin: <i>Lorem ipsum dolor sit
+                                        amet</i>.
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-check-circle'></i>
+                                </div>
+                                <h3 class="lesson-card-title"><code>&lt;mark&gt;</code> - Highlight Party</h3>
+                                <p class="lesson-card-text">
+                                    <mark>This text has been marked</mark>, probably because it said something
+                                    important. Or maybe it's just the HTML version of using a highlighter while
+                                    pretending to study.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-code-alt'></i>
+                                </div>
+                                <h3 class="lesson-card-title"><code>&lt;small&gt;</code> - Whisper Text</h3>
+                                <p class="lesson-card-text">
+                                    <small>This text is smaller, like the fine print that says "not responsible for
+                                        broken keyboards from coding frustration." Perfect for secrets and legal
+                                        disclaimers nobody reads.</small>
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-list-ul'></i>
+                                </div>
+                                <h3 class="lesson-card-title"><code>&lt;del&gt;</code> & <code>&lt;ins&gt;</code> -
+                                    Mistakes & Corrections</h3>
+                                <p class="lesson-card-text">
+                                    <del>I totally didn't forget to save my code</del>. <ins>I definitely saved my
+                                        code.</ins> Use these when you change your mind, like deciding pizza
+                                    <del>isn't</del> <ins>is</ins> breakfast.
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-check-circle'></i>
+                                </div>
+                                <h3 class="lesson-card-title"><code>&lt;sup&gt;</code> & <code>&lt;sub&gt;</code> - Math
+                                    & Science</h3>
+                                <p class="lesson-card-text">
+                                    Superscript for footnotes<sup>1</sup> and Subscript for chemistry. Perfect for when
+                                    you need to pretend you paid attention in science class while actually just making
+                                    memes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card-grid">
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-code-alt'></i>
+                                </div>
+                                <h3 class="lesson-card-title"><code>&lt;b&gt;</code> - Bold Statements</h3>
+                                <p class="lesson-card-text">
+                                    <b>This text is bold but not necessarily important</b>—like when you confidently
+                                    type code you know will probably break. It's visual emphasis without the semantic
+                                    weight.
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-list-ul'></i>
+                                </div>
+                                <h3 class="lesson-card-title"><code>&lt;em&gt;</code> - Emphasis Drama</h3>
+                                <p class="lesson-card-text">
+                                    <em>This is emphasized text</em>, which screen readers will read with extra feeling.
+                                    Use it when you want to sound <em>very</em> serious about your taco preferences.
+                                </p>
+                            </div>
+
+                            <div class="lesson-card">
+                                <div class="lesson-card-header">
+                                    <i class='bx bx-check-circle'></i>
+                                </div>
+                                <h3 class="lesson-card-title">Combo Meal - Mix & Match</h3>
+                                <p class="lesson-card-text">
+                                    <strong><i>You can combine these!</i></strong> <mark><small>Like this weird
+                                            highlighting</small></mark>. Just don't make your page look like a
+                                    <del>WordArt</del> <ins>modern design</ins> explosion.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-highlight">
+                    <div class="lesson-highlight-icon">
+                        <i class='bx bx-bulb'></i>
+                    </div>
+                    <div class="lesson-highlight-content">
+                        <h3 class="lesson-highlight-title">Remember This</h3>
+                        <p>
+                            Use semantic tags like <strong>&lt;strong&gt;</strong> and <strong>&lt;em&gt;</strong> for
+                            meaning, not just style.
+                            Tags like <strong>&lt;b&gt;</strong> and <strong>&lt;i&gt;</strong> only change appearance.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="lesson-part">
+                    <div class="lesson-part-header">
+                        <span class="lesson-part-number">Part 2</span>
+                        <h2 class="lesson-part-title title-small">Deeper Dive on Tags: Because We're Not Scared of HTML
+                        </h2>
+                    </div>
+
+                    <div class="lesson-part-content">
+                        <p class="text-base font-normal">
+                            Let's look at each tag with real examples. This is where the magic happens—or at least where
+                            text gets fancier.
+                        </p>
+
+                        <div class="lesson-steps">
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">1</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Bold vs Strong: The Sibling Rivalry</h3>
+                                    <p><code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code> look the same but have
+                                        different personalities. One's for show, one's for meaning.</p>
+                                    <br>
+                                    <div class="lesson-code">
+                                        <div class="lesson-code-header">
+                                            <span class="lesson-code-label">HTML</span>
+                                        </div>
+                                        <pre class="lesson-code-block"><code>&lt;p&gt;
+    This is &lt;b&gt;visually bold&lt;/b&gt; text. 
+    This is &lt;strong&gt;semantically important&lt;/strong&gt; text.
+&lt;/p&gt;</code></pre>
+                                    </div>
+                                    <br>
+                                    <div class="lesson-highlight">
+                                        <div class="lesson-highlight-icon">
+                                            <i class='bx bx-bulb'></i>
+                                        </div>
+                                        <div class="lesson-highlight-content">
+                                            <h3 class="lesson-highlight-title">Accessibility Tip</h3>
+                                            <p>Screen readers don't care about <code>&lt;b&gt;</code> but will emphasize
+                                                <code>&lt;strong&gt;</code>. Use <code>&lt;strong&gt;</code> for actual
+                                                important stuff like warnings. Use <code>&lt;b&gt;</code> for making
+                                                your mediocre CSS look confident.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">2</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Italic vs Emphasis: The Drama Continues</h3>
+                                    <p><code>&lt;i&gt;</code> for style, <code>&lt;em&gt;</code> for drama. One slants,
+                                        the other <em>means</em> it.</p>
+                                    <br>
+                                    <div class="lesson-code">
+                                        <div class="lesson-code-header">
+                                            <span class="lesson-code-label">HTML</span>
+                                        </div>
+                                        <pre class="lesson-code-block"><code>&lt;p&gt;
+    &lt;i&gt;This text is slanted&lt;/i&gt; for no particular reason.
+    &lt;em&gt;This text is emphasized&lt;/em&gt; because I mean it!
+&lt;/p&gt;</code></pre>
+                                    </div>
+                                    <br>
+                                    <div class="lesson-highlight">
+                                        <div class="lesson-highlight-icon">
+                                            <i class='bx bx-bulb'></i>
+                                        </div>
+                                        <div class="lesson-highlight-content">
+                                            <h3 class="lesson-highlight-title">When to Use Which</h3>
+                                            <p>Use <code>&lt;i&gt;</code> for technical terms, foreign words, or when
+                                                you want to sound fancy. Use <code>&lt;em&gt;</code> when you want
+                                                screen readers to change their tone. Also use <code>&lt;em&gt;</code>
+                                                when you're <em>really</em> annoyed about centering divs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">3</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Del & Ins: The "I Changed My Mind" Duo</h3>
+                                    <p>Show your mistakes (<code>&lt;del&gt;</code>) and corrections
+                                        (<code>&lt;ins&gt;</code>) like a responsible adult.</p>
+                                    <br>
+                                    <div class="lesson-code">
+                                        <div class="lesson-code-header">
+                                            <span class="lesson-code-label">HTML</span>
+                                        </div>
+                                        <pre class="lesson-code-block"><code>&lt;p&gt;
+    I will &lt;del&gt;procrastinate&lt;/del&gt; &lt;ins&gt;definitely start coding&lt;/ins&gt; tomorrow.
+    My code is &lt;del&gt;buggy&lt;/del&gt; &lt;ins&gt;feature-rich&lt;/ins&gt;.
+&lt;/p&gt;</code></pre>
+                                    </div>
+                                    <br>
+
+                                    <div class="lesson-highlight">
+                                        <div class="lesson-highlight-icon">
+                                            <i class='bx bx-bulb'></i>
+                                        </div>
+                                        <div class="lesson-highlight-content">
+                                            <h3 class="lesson-highlight-title">Practical Use</h3>
+                                            <p>These tags are perfect for showing document edits, tracking changes, or
+                                                documenting your journey from "I know what I'm doing" to "Google, please
+                                                help me." Browsers automatically style <code>&lt;del&gt;</code> with
+                                                strikethrough and <code>&lt;ins&gt;</code> with underline because
+                                                they're helpful like that.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">4</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Mark: The Highlighter Hero</h3>
+                                    <p><code>&lt;mark&gt;</code> highlights text like you're studying for a test you'll
+                                        definitely fail.</p>
+                                    <br>
+                                    <div class="lesson-code">
+                                        <div class="lesson-code-header">
+                                            <span class="lesson-code-label">HTML</span>
+                                        </div>
+                                        <pre class="lesson-code-block"><code>&lt;p&gt;
+    Remember to &lt;mark&gt;save your work&lt;/mark&gt; before screaming at the computer.
+    This is &lt;mark&gt;important text&lt;/mark&gt; that you'll ignore anyway.
+&lt;/p&gt;</code></pre>
+                                    </div>
+                                    <br>
+
+                                    <div class="lesson-highlight">
+                                        <div class="lesson-highlight-icon">
+                                            <i class='bx bx-bulb'></i>
+                                        </div>
+                                        <div class="lesson-highlight-content">
+                                            <h3 class="lesson-highlight-title">Don't Overdo It</h3>
+                                            <p><code>&lt;mark&gt;</code> is like highlighter: great in moderation,
+                                                terrible when you highlight everything. Use it to draw attention to key
+                                                terms or search results. Don't make your page look like a banana threw
+                                                up on it.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">5</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Sub & Sup: The Math Wizards</h3>
+                                    <p>Make text go up (<code>&lt;sup&gt;</code>) or down (<code>&lt;sub&gt;</code>) for
+                                        that scientific feel.</p>
+                                    <br>
+                                    <div class="lesson-code">
+                                        <div class="lesson-code-header">
+                                            <span class="lesson-code-label">HTML</span>
+                                        </div>
+                                        <pre class="lesson-code-block"><code>&lt;p&gt;
+    Water is H&lt;sub&gt;2&lt;/sub&gt;O, unless you're me, then it's H&lt;sub&gt;2&lt;/sub&gt;O&lt;sup&gt;with coffee&lt;/sup&gt;.
+    2&lt;sup&gt;10&lt;/sup&gt; is how many times you'll refresh Stack Overflow today.
+&lt;/p&gt;</code></pre>
+                                    </div>
+                                    <br>
+
+                                    <div class="lesson-highlight">
+                                        <div class="lesson-highlight-icon">
+                                            <i class='bx bx-bulb'></i>
+                                        </div>
+                                        <div class="lesson-highlight-content">
+                                            <h3 class="lesson-highlight-title">Common Uses</h3>
+                                            <p><code>&lt;sub&gt;</code>: Chemical formulas (H<sub>2</sub>O),
+                                                mathematical indices. <code>&lt;sup&gt;</code>: Exponents
+                                                (x<sup>2</sup>), footnotes<sup>[1]</sup>, trademark symbols™. Also
+                                                perfect for pretending you paid attention in chemistry while actually
+                                                just making water look fancy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-step">
+                                <div class="lesson-step-number">6</div>
+                                <div class="lesson-step-content">
+                                    <h3 class="lesson-step-title">Small: The Whisper Tag</h3>
+                                    <p><code>&lt;small&gt;</code> makes text smaller for when you want to say something
+                                        but not really commit.</p>
+                                    <br>
+                                    <div class="lesson-code">
+                                        <div class="lesson-code-header">
+                                            <span class="lesson-code-label">HTML</span>
+                                        </div>
+                                        <pre class="lesson-code-block"><code>&lt;p&gt;
+    This is regular text.
+    &lt;small&gt;This is fine print that says "we're not responsible for your CSS nightmares."&lt;/small&gt;
+    &lt;small&gt;&lt;small&gt;This is even smaller, like my will to live after debugging for 5 hours.&lt;/small&gt;&lt;/small&gt;
+&lt;/p&gt;</code></pre>
+                                    </div>
+                                    <br>
+
+                                    <div class="lesson-highlight">
+                                        <div class="lesson-highlight-icon">
+                                            <i class='bx bx-bulb'></i>
+                                        </div>
+                                        <div class="lesson-highlight-content">
+                                            <h3 class="lesson-highlight-title">Legal Stuff & Side Notes</h3>
+                                            <p>Perfect for copyright notices, disclaimers, side comments, and terms
+                                                nobody reads. You can nest <code>&lt;small&gt;</code> tags to make text
+                                                even smaller, but after two levels, even ants will need reading glasses.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lesson-divider"></div>
+
+                <div class="lesson-quote">
+                    <div class="lesson-quote-icon">
+                        <i class='bx bxs-quote-alt-left'></i>
+                    </div>
+                    <blockquote class="lesson-quote-text">
+                        "HTML formatting tags are like spices: a little <strong>bold</strong> makes it stand out, too
+                        much <mark>highlight</mark> gives everyone heartburn, and nobody really understands why
+                        <small><small><small>triple small</small></small></small> exists."
+                    </blockquote>
+                    <p class="lesson-quote-author">— A Developer Who Just Wants to Center a Div</p>
+                </div>
+
+                <section class="section" style="padding-block: 2rem 4rem;">
+                    <div class="container">
+                        <nav class="lesson-navigation">
+                            <a href="html_paragraph.html" class="lesson-nav-btn lesson-nav-prev">
+                                <span class="lesson-nav-label">
+                                    <i class='bx bx-chevron-left'></i>
+                                    Previous
+                                </span>
+                                <span class="lesson-nav-title">HTML Paragraph: <br> Where text learns to breathe</span>
+                            </a>
+
+                            <a href="#" class="lesson-nav-btn lesson-nav-next">
+                                <span class="lesson-nav-label">
+                                    Next
+                                    <i class='bx bx-chevron-right'></i>
+                                </span>
+                                <span class="lesson-nav-title">Coming Soon</span>
+                            </a>
+                        </nav>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="../script_src/index.js"></script>
+</body>
+
+</html>
